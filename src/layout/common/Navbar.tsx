@@ -73,9 +73,9 @@ const Navbar = () => {
                 <div className="w-full flex text-[14px] h-[40px] bg-[color:var(--primary-color)] text-white">
                         <div className="container flex items-center justify-between font-medium">
                                 <div className="flex items-center gap-5">
-                                        <Link href="/" className="flex items-center gap-1"><BsCalendarWeek />Tuesday, Aug 15 2023</Link>
-                                        <Link href="/" className="flex items-center gap-1"><MdLocationOn />Ha Noi, VietNam</Link>
-                                        <Link href="/" className="flex items-center gap-1"><GoClock />Mon - Fri: 8 AM - 5 PM</Link>
+                                        <Link href="/" className="flex items-center gap-1"><BsCalendarWeek />Thứ 7, ngày 2 tháng 9</Link>
+                                        <Link href="/" className="flex items-center gap-1"><MdLocationOn />Hà Nội, Việt Nam</Link>
+                                        <Link href="/" className="flex items-center gap-1"><GoClock />Thứ 2 - Thứ 7: 8H - 17H</Link>
                                 </div>
 
                                 <div className="flex items-center h-full">

@@ -1,13 +1,14 @@
 'use client'
 import React from 'react'
 import Link from 'next/link';
-import { BsDiscord, BsGithub, BsFacebook, BsInstagram, BsTwitter } from 'react-icons/bs';
+import { BsDiscord, BsGithub, BsFacebook, BsInstagram, BsTwitter, BsArrowRight } from 'react-icons/bs';
+import { GoClock } from 'react-icons/go';
 
 const Footer = () => {
         return (
-                <footer className="w-full bg-white mt-5 border-t border-t-[#A3B3BC] text-[#A3B3BC]">
+                <footer className="w-full bg-white mt-5 border-t border-t-[#A3B3BC]">
                         <div className="container flex justify-between py-6 gap-12">
-                                <div className="w-3/5">
+                                <div className="w-3/5 text-[#A3B3BC]">
                                         {/* Về ItourGo */}
                                         <div className='flex gap-12'>
                                                 <div>
@@ -41,7 +42,7 @@ const Footer = () => {
                                                 </div>
                                         </div>
                                         {/* Thương hiệu */}
-                                        <div className='flex gap-12 items-center'>
+                                        <div className='flex gap-12 items-center mt-6'>
                                                 <div className='flex items-center gap-2'>
                                                         <div className='h-[48px]'>
                                                                 <img className="w-full" src="https://www.ivivu.com/du-lich/content/img/ico-wta-winner-shield-2021.png" alt="" />
@@ -62,8 +63,23 @@ const Footer = () => {
                                                         <p className='flex-1'>Đại lý Du lịch Trực tuyến Hàng đầu Việt Nam</p>
                                                 </div>
                                         </div>
+                                        <p className="mt-6">Địa chỉ: Phòng 2414, Tòa C Vinaconex2, Kim Lũ, Kim Văn, Hoàng Mai, Hà Nội</p>
                                 </div>
-                                <div className="flex-1"></div>
+                                <div className="flex-1">
+                                        <div>
+                                                <p>Bạn cần trợ giúp? Bấm gọi ngay</p>
+                                                <div className='flex gap-8'>
+                                                        <p className="text-2xl text-orange-500 font-medium">1900 1234</p>
+                                                        <span className="text-xs flex items-center">
+                                                                <GoClock />
+                                                                7h30
+                                                                <BsArrowRight />
+                                                                21h30
+                                                        </span>
+                                                </div>
+                                                <p>Tư vấn với PNG SOFT - Qua Messenger</p>
+                                        </div>
+                                </div>
 
                         </div>
 
