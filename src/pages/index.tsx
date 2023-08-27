@@ -45,7 +45,9 @@ const Home = () => {
                     </option>
                   </Select>
                 </div>
-                <Button className="w-full mt-6" size="lg"><span className="flex items-center gap-2"><BsSearch />Search Now</span></Button>
+                <Link href="/search/search">
+                  <Button className="w-full mt-6" size="lg"><span className="flex items-center gap-2"><BsSearch />Search Now</span></Button>
+                </Link>
               </form>
 
               <div className="flex h-[52px] gap-4 mt-12">
