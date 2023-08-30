@@ -352,7 +352,7 @@ const Home = () => {
             <div className="bg-no-repeat bg-center bg-cover w-full pt-[109%]" style={{ backgroundImage: 'url("https://sohanews.sohacdn.com/thumb_w/660/160588918557773824/2022/11/5/photo1667607552661-16676075527751241222501.jpg")' }}>
 
             </div>
-            <div className="bg-[#029E9D] text-center text-white py-2">
+            <div className="bg-[color:var(--primary-color)] text-center text-white py-2">
               <h1 className="text-2xl font-medium">Thùy Tiên</h1>
               <h3 className="text-lg font-medium capitalize">hướng dẫn viên</h3>
             </div>
@@ -361,7 +361,7 @@ const Home = () => {
             <div className="bg-no-repeat bg-center bg-cover w-full pt-[109%]" style={{ backgroundImage: 'url("https://sohanews.sohacdn.com/thumb_w/660/160588918557773824/2022/11/5/photo1667607552661-16676075527751241222501.jpg")' }}>
 
             </div>
-            <div className="bg-[#029E9D] text-center text-white py-2">
+            <div className="bg-[color:var(--primary-color)] text-center text-white py-2">
               <h1 className="text-2xl font-medium">Thùy Tiên</h1>
               <h3 className="text-lg font-medium capitalize">hướng dẫn viên</h3>
             </div>
@@ -371,7 +371,7 @@ const Home = () => {
             <div className="bg-no-repeat bg-center bg-cover w-full pt-[109%]" style={{ backgroundImage: 'url("https://sohanews.sohacdn.com/thumb_w/660/160588918557773824/2022/11/5/photo1667607552661-16676075527751241222501.jpg")' }}>
 
             </div>
-            <div className="bg-[#029E9D] text-center text-white py-2">
+            <div className="bg-[color:var(--primary-color)] text-center text-white py-2">
               <h1 className="text-2xl font-medium">Thùy Tiên</h1>
               <h3 className="text-lg font-medium capitalize">hướng dẫn viên</h3>
             </div>
@@ -380,7 +380,7 @@ const Home = () => {
             <div className="bg-no-repeat bg-center bg-cover w-full pt-[109%]" style={{ backgroundImage: 'url("https://sohanews.sohacdn.com/thumb_w/660/160588918557773824/2022/11/5/photo1667607552661-16676075527751241222501.jpg")' }}>
 
             </div>
-            <div className="bg-[#029E9D] text-center text-white py-2">
+            <div className="bg-[color:var(--primary-color)] text-center text-white py-2">
               <h1 className="text-2xl font-medium">Thùy Tiên</h1>
               <h3 className="text-lg font-medium capitalize">hướng dẫn viên</h3>
             </div>
@@ -433,7 +433,7 @@ const Home = () => {
                   <p>Quang Linh</p>
                 </div>
                 <div className='flex items-center'>
-                  <button className=' bg-[#029E9D] px-6 py-2 rounded-full text-white'>Đọc thêm</button>
+                  <button className=' bg-[color:var(--primary-color)] px-6 py-2 rounded-full text-white'>Đọc thêm</button>
                 </div>
               </div>
 
@@ -461,7 +461,7 @@ const Home = () => {
                   <p>Quang Linh</p>
                 </div>
                 <div className='flex items-center'>
-                  <button className=' bg-[#029E9D] px-6 py-2 rounded-full text-white'>Đọc thêm</button>
+                  <button className=' bg-[color:var(--primary-color)] px-6 py-2 rounded-full text-white'>Đọc thêm</button>
                 </div>
               </div>
 

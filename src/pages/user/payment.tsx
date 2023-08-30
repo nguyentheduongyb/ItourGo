@@ -1,6 +1,6 @@
 import { Fragment, useState, useContext } from "react"
 import Link from "next/link"
-import { Checkbox, Label, Button, TextInput, Tooltip } from "flowbite-react"
+import { Checkbox, Label, Button, TextInput, Tooltip, Modal } from "flowbite-react"
 
 import { BsInfoCircle } from "react-icons/bs"
 import { SiEthereum } from "react-icons/si"
@@ -10,10 +10,11 @@ import { LuCopy } from "react-icons/lu"
 
 const Payment = () => {
 
+        const [show, setShow] = useState(false)
         const [quantity, setQuantity] = useState(1)
         const [price, setPrice] = useState(150000)
         const [total, setTotal] = useState(price)
-
+        const transferMessage = "entidy"
         return (
                 <div>
                         <div className="bg-[#f5f5f5] py-5">
@@ -73,12 +74,57 @@ const Payment = () => {
                                                                 <Label>Lời nhắn:</Label>
                                                                 <TextInput className="flex-1" placeholder="Lưu ý cho người bán"></TextInput>
                                                         </div>
-                                                        <button className="py-2 px-4 bg-[color:var(--primary-color)] text-white font-bold rounded-xl">Thanh toán</button>
+                                                        <button onClick={() => { setShow(true) }} className="py-2 px-4 bg-[color:var(--primary-color)] text-white font-bold rounded-xl">Thanh toán</button>
                                                 </div>
                                         </div>
 
                                 </div>
                         </div>
+
+                        <Modal show={show} size="lg" onClose={() => { setShow(false) }}>
+                                <Modal.Header />
+                                <h1 className="text-center text-2xl uppercase mt-6 text-medium">Thanh toán tour du lịch</h1>
+                                <Modal.Body>
+                                        <div className="border rounded p-4 flex flex-col items-center justify-center mb-6">
+                                                <div className="border border-dotted py-3 px-4 rounded flex items-center gap-8">
+                                                        <img className="w-24" src="https://upload.wikimedia.org/wikipedia/commons/2/25/Logo_MB_new.png" alt="" />
+                                                        <div>
+                                                                <p className="font-medium text-xl">0985444759</p>
+                                                                <p>NGUYEN THE DUONG</p>
+                                                        </div>
+                                                </div>
+                                                <img className="w-3/5" src="/qrcode.png" alt="" />
+                                        </div>
+                                        <div className="flex flex-col gap-6">
+                                                {/* <div className="border border-dotted py-3 px-4 rounded flex items-center gap-8">
+                                                        <img className="w-24" src="https://upload.wikimedia.org/wikipedia/commons/2/25/Logo_MB_new.png" alt="" />
+                                                        <div>
+                                                                <p className="font-medium text-xl">0985444759</p>
+                                                                <p>NGUYEN THE DUONG</p>
+                                                        </div>
+                                                </div>
+                                                <div className="border border-dotted py-3 px-4 rounded flex items-center gap-8">
+                                                        <img className="w-24" src="https://upload.wikimedia.org/wikipedia/commons/2/25/Logo_MB_new.png" alt="" />
+                                                        <div>
+                                                                <p className="font-medium text-xl">0985444759</p>
+                                                                <p>NGUYEN THE DUONG</p>
+                                                        </div>
+                                                </div> */}
+                                                <div className="flex pl-4 gap-8 items-center">
+                                                        <label className="text-red-500 text-lg" htmlFor="">Lời nhắn:</label>
+                                                        <div className="flex justify-between items-center flex-1 bg-gray-400 pl-5  border rounded overflow-hidden">
+                                                                <p>{transferMessage}</p>
+                                                                {/* <button onClick={() => navigator.clipboard.writeText(transferMessage)} className="text-xs p-2 py-3 bg-white">Sao chép</button> */}
+                                                                <Tooltip content="Copied" trigger="click" className="text-xs leading-none py-1 px-2">
+                                                                        <button className="text-xs p-4 bg-white" onClick={() => navigator.clipboard.writeText(transferMessage)}>
+                                                                                <LuCopy />
+                                                                        </button>
+                                                                </Tooltip>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </Modal.Body>
+                        </Modal>
                 </div>
 
         )

@@ -8,7 +8,7 @@ import { MdLocationOn } from 'react-icons/md'
 
 const SearchItem = () => {
         return (
-                <div className="rounded w-full p-1 bg-[#FBE4C0]">
+                <Link href="/tour/tour-tim-kiem-1" className="rounded w-full p-1 bg-[#FBE4C0]">
                         <p className="flex items-center py-2 justify-center">
                                 <span className="flex items-center">
                                         <GoClock />
@@ -68,7 +68,7 @@ const SearchItem = () => {
 
                                 </div>
                         </div>
-                </div>
+                </Link>
         )
 }
 

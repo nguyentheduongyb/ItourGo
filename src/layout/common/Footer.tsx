@@ -1,7 +1,7 @@
 'use client'
 import React from 'react'
 import Link from 'next/link';
-import { BsDiscord, BsGithub, BsFacebook, BsInstagram, BsTwitter, BsArrowRight } from 'react-icons/bs';
+import { BsDiscord, BsGithub, BsFacebook, BsInstagram, BsTwitter, BsArrowRight, BsLinkedin } from 'react-icons/bs';
 import { GoClock } from 'react-icons/go';
 
 const Footer = () => {
@@ -67,7 +67,7 @@ const Footer = () => {
                                 </div>
                                 <div className="flex-1">
                                         <div>
-                                                <p>Bạn cần trợ giúp? Bấm gọi ngay</p>
+                                                <p className="text-bold text-xl">Bạn cần trợ giúp? Bấm gọi ngay</p>
                                                 <div className='flex gap-8'>
                                                         <p className="text-2xl text-orange-500 font-medium">1900 1234</p>
                                                         <span className="text-xs flex items-center">
@@ -77,8 +77,15 @@ const Footer = () => {
                                                                 21h30
                                                         </span>
                                                 </div>
-                                                <p>Tư vấn với PNG SOFT - Qua Messenger</p>
+                                                <p className='mt-6'>Tư vấn với PNG SOFT - Qua Messenger</p>
+                                                <div className="flex items-center h-full mt-6">
+                                                        <Link href="http://" className="px-4 h-3/5 flex items-center"><BsFacebook fontSize={18} /></Link>
+                                                        <Link href="http://" className="px-4 h-3/5 flex items-center"><BsTwitter fontSize={18} /></Link>
+                                                        <Link href="http://" className="px-4 h-3/5 flex items-center"><BsInstagram fontSize={18} /></Link>
+                                                        <Link href="http://" className="px-4 h-3/5 flex items-center"><BsLinkedin fontSize={18} /></Link>
+                                                </div>
                                         </div>
+
                                 </div>
 
                         </div>
