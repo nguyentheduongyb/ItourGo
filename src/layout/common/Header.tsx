@@ -36,9 +36,9 @@ const Header = () => {
         return (
                 <div className="w-full bg-white sticky top-0 z-[40]">
                         <Navbar />
-                        <div className="w-full h-[94px]">
+                        <div className="w-full h-[64px]">
                                 <div className="flex items-center h-full container justify-between">
-                                        <Link href="/"><img className="h-[92px]" src="/itourgo.jpg" alt="" /></Link>
+                                        <Link href="/"><img className="h-[64px]" src="/itourgo-logo.png" alt="" /></Link>
                                         <div className="flex gap-4 text-[15px]">
                                                 <Link href="/" className="dropdown-hover uppercase flex items-center gap-1 relative py-3 text-[color:var(--primary-color)]">Trang chủ<MdKeyboardArrowDown fontSize={22} />
                                                         <ul className="dropdown-menu hidden w-60 absolute top-[100%] bg-white drop-shadow-[0_0_10px_rgba(0,0,0,0.25)] text-black">

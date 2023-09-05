@@ -15,9 +15,9 @@ const Home = () => {
             <div className="">
               <h4 className="mb-8 text-white text-5xl font-bold capitalize">Khám phá thế giới</h4>
               <h1 className="mb-8 text-[#D0E3F0] text-lg font-semibold capitalize">Bắt đầu lên kế hoạch cho chuyến đi mơ ước của bạn ngay hôm nay!</h1>
-              <p className="mb-8">Tìm những địa điểm tuyệt vời để lưu trú, ăn uống, mua sắm hoặc ghé thăm từ các chuyên gia địa phương</p>
+              <p className="mb-16">Tìm những địa điểm tuyệt vời để lưu trú, ăn uống, mua sắm hoặc ghé thăm từ các chuyên gia địa phương</p>
 
-              <form action="">
+              <form className='' action="">
                 <div className="w-full grid grid-cols-2 gap-8">
                   <TextInput
                     id="destination"
@@ -50,12 +50,12 @@ const Home = () => {
                 </Link>
               </form>
 
-              <div className="flex h-[52px] gap-4 mt-12">
+              {/* <div className="flex h-[52px] gap-4 mt-12">
                 <button className="px-3 h-full flex gap-2 bg-white items-center rounded"><FaHotel /><span className="font-semibold">Khách sạn</span></button>
                 <button className="px-3 h-full flex gap-2 bg-white items-center rounded"><FaHotel /><span className="font-semibold">Nhà hàng</span></button>
                 <button className="px-3 h-full flex gap-2 bg-white items-center rounded"><FaHotel /><span className="font-semibold">Phương tiện</span></button>
                 <button className="px-3 h-full flex gap-2 bg-white items-center rounded"><FaHotel /><span className="font-semibold">Mã giảm giá</span></button>
-              </div>
+              </div> */}
 
 
 
@@ -69,12 +69,13 @@ const Home = () => {
         <div className="absolute w-full left-0 bottom-[-120px]">
           <div className="w-5/6 mx-auto">
             <div className="grid grid-cols-5 gap-6 flex justify-around">
-              <Link href="/tour/day-la-bai-viet-1" className=" hover:text-[color:var(--primary-color)]">
+              <Link href="/hotel" className=" hover:text-[color:var(--primary-color)]">
                 <div className="rounded-2xl border-white bg-white border-[10px] w-full hover:drop-shadow-[0_0_10px_rgba(0,0,0,0.25)]">
                   <div className="rounded-2xl overflow-hidden">
                     <img className="w-full" src="https://cdn.tourradar.com/s3/content-pages/391/438x292/V2aYSJ.jpg" alt="" />
                   </div>
-                  <h5 className="px-4 pb-2 pt-4 font-semibold">Đi bộ & Leo núi</h5>
+                  <h5 className="px-4 pb-3 pt-3 font-semibold">Khách Sạn</h5>
+                  <p className="px-4 pb-2">200 khách sạn</p>
                 </div>
               </Link>
               <Link href="/tour/day-la-bai-viet-1" className=" hover:text-[color:var(--primary-color)]">
@@ -82,7 +83,8 @@ const Home = () => {
                   <div className="rounded-2xl overflow-hidden">
                     <img className="w-full" src="https://cdn.tourradar.com/s3/content-pages/391/438x292/V2aYSJ.jpg" alt="" />
                   </div>
-                  <h5 className="px-4 pb-2 pt-4 font-semibold">Đi bộ & Leo núi</h5>
+                  <h5 className="px-4 pb-3 pt-3 font-semibold">Nhà Hàng</h5>
+                  <p className="px-4 pb-2">200 khách sạn</p>
                 </div>
               </Link>
               <Link href="/tour/day-la-bai-viet-1" className=" hover:text-[color:var(--primary-color)]">
@@ -90,7 +92,8 @@ const Home = () => {
                   <div className="rounded-2xl overflow-hidden">
                     <img className="w-full" src="https://cdn.tourradar.com/s3/content-pages/391/438x292/V2aYSJ.jpg" alt="" />
                   </div>
-                  <h5 className="px-4 pb-2 pt-4 font-semibold">Đi bộ & Leo núi</h5>
+                  <h5 className="px-4 pb-3 pt-3 font-semibold">Vé Máy Bay</h5>
+                  <p className="px-4 pb-2">200 khách sạn</p>
                 </div>
               </Link>
               <Link href="/tour/day-la-bai-viet-1" className=" hover:text-[color:var(--primary-color)]">
@@ -98,7 +101,8 @@ const Home = () => {
                   <div className="rounded-2xl overflow-hidden">
                     <img className="w-full" src="https://cdn.tourradar.com/s3/content-pages/391/438x292/V2aYSJ.jpg" alt="" />
                   </div>
-                  <h5 className="px-4 pb-2 pt-4 font-semibold">Đi bộ & Leo núi</h5>
+                  <h5 className="px-4 pb-3 pt-3 font-semibold">Phương Tiện</h5>
+                  <p className="px-4 pb-2">200 khách sạn</p>
                 </div>
               </Link>
               <Link href="/tour/day-la-bai-viet-1" className=" hover:text-[color:var(--primary-color)]">
@@ -106,7 +110,8 @@ const Home = () => {
                   <div className="rounded-2xl overflow-hidden">
                     <img className="w-full" src="https://cdn.tourradar.com/s3/content-pages/391/438x292/V2aYSJ.jpg" alt="" />
                   </div>
-                  <h5 className="px-4 pb-2 pt-4 font-semibold">Đi bộ & Leo núi</h5>
+                  <h5 className="px-4 pb-3 pt-3 font-semibold">Mã Giảm Giá</h5>
+                  <p className="px-4 pb-2">200 khách sạn</p>
                 </div>
               </Link>
             </div>

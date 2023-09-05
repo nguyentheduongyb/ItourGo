@@ -7,9 +7,9 @@ import { Button, Checkbox, Label, TextInput } from 'flowbite-react';
 const Register = () => {
 
         return (
-                <div className="text-black h-screen grid grid-cols-2">
-                        <div className="flex items-center justify-center">
-                                <form className="flex max-w-md flex-col gap-4 w-[48%]">
+                <div className="text-black h-screen flex">
+                        <div className="flex items-center justify-center w-2/5">
+                                <form className="flex max-w-md flex-col gap-4 w-[54%]">
                                         <div className='mb-6'>
                                                 <h1 className="font-bold text-3xl">Đăng ký</h1>
                                                 <p className="text-[#67748E]">Nhập email và mật khẩu của bạn để đăng ký</p>
@@ -97,13 +97,13 @@ const Register = () => {
 
                                 </form>
                         </div>
-                        <div className="flex items-center justify-center relative">
-                                <div className="w-[715px] bg-gradient-to-l from-[#7928ca] to-[#ff0080] h-[90vh] rounded-[12px] flex items-center justify-center" >
-                                        <div className='bg-no-repeat bg-cover bg-center w-full h-full absolute opacity-40' style={{ backgroundImage: 'url("https://demos.creative-tim.com/soft-ui-dashboard-pro/assets/img/shapes/pattern-lines.svg")' }}></div>
-                                        <div className="w-full flex justify-center items-center flex-col text-center">
-                                                <img className="max-w-[500px] w-full relative" src="https://demos.creative-tim.com/soft-ui-dashboard-pro/assets/img/illustrations/chat.png" alt="chat-img" />
-                                                {/* <h4 className="mt-5 text-white font-weight-bolder">"Attention is the new currency"</h4> */}
-                                                <p className="text-white">The more effortless the writing looks, the more effort the writer actually put into the process.</p>
+                        <div className="flex-1 flex items-center justify-center relative">
+                                <div className="w-[96%] relative rounded-xl overflow-hidden h-[88vh] rounded-[12px] flex items-center justify-center bg-no-repeat bg-cover bg-center" style={{ backgroundImage: 'url("https://banahills.sunworld.vn/wp-content/uploads/2020/10/Banahill-D.jpg")' }}>
+                                        <div className="absolute w-full h-full bg-[rgba(0,0,0,0.35)]"></div>
+                                        <div className="absolute w-full flex justify-center items-center flex-col text-center px-3">
+                                                <img className="max-w-[400px] w-full " src="https://demos.creative-tim.com/soft-ui-dashboard-pro/assets/img/illustrations/chat.png" alt="chat-img" />
+                                                <h4 className="text-[color:var(--primary-color)] text-3xl mb-4 font-semibold">Bà Nà Hills - Đà Nẵng</h4>
+                                                <p className="text-white">Đi du lịch Đà Nẵng mà chưa check-in tại Bà Nà Hills thì quả là thiệt thòi lớn. Khu du lịch Bà Nà Hills ở đâu và vì sao địa điểm này luôn giữ vững sức hấp dẫn đối với du khách qua năm tháng? Hãy cùng tìm kiếm câu trả lời thông qua bài viết này nhé! </p>
                                         </div>
                                 </div>
                         </div>

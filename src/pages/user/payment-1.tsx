@@ -12,9 +12,6 @@ import { log } from "console";
 
 
 const Payment = () => {
-
-
-
         const [show, setShow] = useState(false)
         const [quantity, setQuantity] = useState(1)
         const [price, setPrice] = useState(150000)
@@ -22,28 +19,13 @@ const Payment = () => {
         const transferMessage = "entidy"
         const [imageQR, setImageQR] = useState('')
         const getQRCode = () => {
-                axios.post("https://api.vietqr.io/v2/generate",
-                        {
-                                accountNo: "9985444759",
-                                accountName: "NGUYEN THE DUONG",
-                                acqId: "970436",
-                                addInfo: "entidy",
-                                template: "print",
-                                amount: 1000000
-                        },
-                        {
-                                headers: {
-                                        'x-client-id': '81e76f80-985c-4ba9-b41b-ee2030837574',
-                                        'x-api-key': 'b1f8ac6f-7946-41bf-9492-7ee14802868f'
-                                },
+                axios.post("http://localhost:8888/user/payment",
+                )
+                        .then((data) => {
 
                         })
-                        .then((data) => {
-                                setImageQR(data.data.data.qrDataURL)
-                                setShow(true)
-                        })
                         .catch((err) => {
-                                console.log(err);
+
 
                         })
         }
@@ -51,6 +33,9 @@ const Payment = () => {
                 <div>
                         <div className="bg-[#f5f5f5] py-5">
                                 <div className="container">
+                                        <div className="p-5 bg-white rounded-xl mb-6">
+                                                <p className="text-2xl font-medium">Thanh toán dịch vụ của bạn</p>
+                                        </div>
                                         <div className="px-8 py-8 pb-0 mb-4 bg-white rounded">
                                                 <div className="">
                                                         <div className="flex items-center mb-4">
