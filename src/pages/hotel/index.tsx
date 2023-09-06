@@ -61,7 +61,7 @@ const Hotel = () => {
 
                                                 <div className="flex items-center bg-[rgba(0,0,0,0.2)] rounded-xl p-4">
                                                         {/* <img className="w-full" src="https://htmldesigntemplates.com/html/travelin/images/travel.png" alt="" /> */}
-                                                        <Link href="">
+                                                        <Link href="/hotel/khach-san-ha-noi">
                                                                 <div className='text-white'>
                                                                         <p className='mb-2 text-lg'>Combo 3N2Đ</p>
                                                                         <h4 className="uppercase text-xl font-semibold mb-2">Amiana nha trang</h4>
@@ -85,7 +85,7 @@ const Hotel = () => {
                                         <h3 className="font-medium mb-8 capitalize">Thư giãn - Nạp năng lượng - Khám phá</h3>
                                 </div>
                                 <div className="w-full grid grid-cols-4 flex gap-12">
-                                        <Link href="" className="w-full">
+                                        <Link href="/hotel/khach-san-ha-noi" className="w-full">
                                                 <div className="rounded-lg w-full bg-center bg-no-repeat bg-cover pt-[130%] relative text-white" style={{ backgroundImage: 'url("https://cdn1.ivivu.com/iVivu/2023/05/23/19/chon-2.jpg")' }}>
                                                         <div className="absolute left-0 bottom-0 p-4">
                                                                 <p className='font-bold text-2xl mb-3'>Quốc tế</p>
@@ -94,7 +94,7 @@ const Hotel = () => {
                                                         </div>
                                                 </div>
                                         </Link>
-                                        <Link href="" className="w-full">
+                                        <Link href="/hotel/khach-san-ha-noi" className="w-full">
                                                 <div className="rounded-lg w-full bg-center bg-no-repeat bg-cover pt-[130%] relative text-white" style={{ backgroundImage: 'url("https://cdn1.ivivu.com/iVivu/2022/01/14/16/chon-4.jpg")' }}>
                                                         <div className="absolute left-0 bottom-0 p-4">
                                                                 <p className='font-bold text-2xl mb-3'>Villa</p>
@@ -103,7 +103,7 @@ const Hotel = () => {
                                                         </div>
                                                 </div>
                                         </Link>
-                                        <Link href="" className="w-full">
+                                        <Link href="/hotel/khach-san-ha-noi" className="w-full">
                                                 <div className="rounded-lg w-full bg-center bg-no-repeat bg-cover pt-[130%] relative text-white" style={{ backgroundImage: 'url("https://cdn1.ivivu.com/iVivu/2023/06/01/18/tb1.png")' }}>
                                                         <div className="absolute left-0 bottom-0 p-4">
                                                                 <p className='font-bold text-2xl mb-3'>Team X</p>
@@ -112,7 +112,7 @@ const Hotel = () => {
                                                         </div>
                                                 </div>
                                         </Link>
-                                        <Link href="" className="w-full">
+                                        <Link href="/hotel/khach-san-ha-noi" className="w-full">
                                                 <div className="rounded-lg w-full bg-center bg-no-repeat bg-cover pt-[130%] relative text-white" style={{ backgroundImage: 'url("https://cdn1.ivivu.com/iVivu/2023/06/01/18/tb1.png")' }}>
                                                         <div className="absolute left-0 bottom-0 p-4">
                                                                 <p className='font-bold text-2xl mb-3'>Gift Vourcher</p>
@@ -134,7 +134,7 @@ const Hotel = () => {
                                 <div className="flex flex-col gap-4">
                                         <div className="flex gap-4">
                                                 <div className="w-[28%]">
-                                                        <Link href="">
+                                                        <Link href="/hotel/khach-san-ha-noi">
                                                                 <div className="bg-no-repeat bg-center bg-cover w-full h-full rounded-lg relative" style={{ backgroundImage: 'url("https://i1-dulich.vnecdn.net/2022/05/09/amiana-resort-nha-trang-2087-1-9439-2178-1652070682.jpg?w=0&h=0&q=100&dpr=1&fit=crop&s=1JSGnrxCVKlwjL89p_cJxw")' }}>
                                                                         <div className="absolute left-0 bottom-0 p-4 text-white">
                                                                                 <p className="text-2xl font-bold">Phú Quốc</p>
@@ -145,7 +145,7 @@ const Hotel = () => {
                                                 </div>
                                                 <div className="flex-1 grid grid-rows-2 gap-4">
                                                         <div>
-                                                                <Link href="">
+                                                                <Link href="/hotel/khach-san-ha-noi">
                                                                         <div className="bg-no-repeat bg-center bg-cover w-full h-[200px] rounded-lg relative" style={{ backgroundImage: 'url("https://i1-dulich.vnecdn.net/2022/05/09/amiana-resort-nha-trang-2087-1-9439-2178-1652070682.jpg?w=0&h=0&q=100&dpr=1&fit=crop&s=1JSGnrxCVKlwjL89p_cJxw")' }}>
                                                                                 <div className="absolute left-0 bottom-0 p-4 text-white">
                                                                                         <p className="text-2xl font-bold">Phú Quốc</p>
@@ -157,7 +157,7 @@ const Hotel = () => {
                                                         </div>
                                                         <div className='flex grid grid-cols-2 gap-4'>
                                                                 <div>
-                                                                        <Link href="">
+                                                                        <Link href="/hotel/khach-san-ha-noi">
                                                                                 <div className="bg-no-repeat bg-center bg-cover w-full h-[200px] rounded-lg relative" style={{ backgroundImage: 'url("https://i1-dulich.vnecdn.net/2022/05/09/amiana-resort-nha-trang-2087-1-9439-2178-1652070682.jpg?w=0&h=0&q=100&dpr=1&fit=crop&s=1JSGnrxCVKlwjL89p_cJxw")' }}>
                                                                                         <div className="absolute left-0 bottom-0 p-4 text-white">
                                                                                                 <p className="text-2xl font-bold">Phú Quốc</p>
@@ -168,7 +168,7 @@ const Hotel = () => {
                                                                         </Link>
                                                                 </div>
                                                                 <div>
-                                                                        <Link href="">
+                                                                        <Link href="/hotel/khach-san-ha-noi">
                                                                                 <div className="bg-no-repeat bg-center bg-cover w-full h-[200px] rounded-lg relative" style={{ backgroundImage: 'url("https://i1-dulich.vnecdn.net/2022/05/09/amiana-resort-nha-trang-2087-1-9439-2178-1652070682.jpg?w=0&h=0&q=100&dpr=1&fit=crop&s=1JSGnrxCVKlwjL89p_cJxw")' }}>
                                                                                         <div className="absolute left-0 bottom-0 p-4 text-white">
                                                                                                 <p className="text-2xl font-bold">Phú Quốc</p>
@@ -184,7 +184,7 @@ const Hotel = () => {
                                         <div className="flex gap-4">
                                                 <div className="flex-1 grid grid-rows-2 gap-4">
                                                         <div>
-                                                                <Link href="">
+                                                                <Link href="/hotel/khach-san-ha-noi">
                                                                         <div className="bg-no-repeat bg-center bg-cover w-full h-[200px] rounded-lg relative" style={{ backgroundImage: 'url("https://i1-dulich.vnecdn.net/2022/05/09/amiana-resort-nha-trang-2087-1-9439-2178-1652070682.jpg?w=0&h=0&q=100&dpr=1&fit=crop&s=1JSGnrxCVKlwjL89p_cJxw")' }}>
                                                                                 <div className="absolute left-0 bottom-0 p-4 text-white">
                                                                                         <p className="text-2xl font-bold">Phú Quốc</p>
@@ -196,7 +196,7 @@ const Hotel = () => {
                                                         </div>
                                                         <div className='flex grid grid-cols-2 gap-4'>
                                                                 <div>
-                                                                        <Link href="">
+                                                                        <Link href="/hotel/khach-san-ha-noi">
                                                                                 <div className="bg-no-repeat bg-center bg-cover w-full h-[200px] rounded-lg relative" style={{ backgroundImage: 'url("https://i1-dulich.vnecdn.net/2022/05/09/amiana-resort-nha-trang-2087-1-9439-2178-1652070682.jpg?w=0&h=0&q=100&dpr=1&fit=crop&s=1JSGnrxCVKlwjL89p_cJxw")' }}>
                                                                                         <div className="absolute left-0 bottom-0 p-4 text-white">
                                                                                                 <p className="text-2xl font-bold">Phú Quốc</p>
@@ -207,7 +207,7 @@ const Hotel = () => {
                                                                         </Link>
                                                                 </div>
                                                                 <div>
-                                                                        <Link href="">
+                                                                        <Link href="/hotel/khach-san-ha-noi">
                                                                                 <div className="bg-no-repeat bg-center bg-cover w-full h-[200px] rounded-lg relative" style={{ backgroundImage: 'url("https://i1-dulich.vnecdn.net/2022/05/09/amiana-resort-nha-trang-2087-1-9439-2178-1652070682.jpg?w=0&h=0&q=100&dpr=1&fit=crop&s=1JSGnrxCVKlwjL89p_cJxw")' }}>
                                                                                         <div className="absolute left-0 bottom-0 p-4 text-white">
                                                                                                 <p className="text-2xl font-bold">Phú Quốc</p>
@@ -220,7 +220,7 @@ const Hotel = () => {
                                                         </div>
                                                 </div>
                                                 <div className="w-[28%]">
-                                                        <Link href="">
+                                                        <Link href="/hotel/khach-san-ha-noi">
                                                                 <div className="bg-no-repeat bg-center bg-cover w-full h-full rounded-lg relative" style={{ backgroundImage: 'url("https://i1-dulich.vnecdn.net/2022/05/09/amiana-resort-nha-trang-2087-1-9439-2178-1652070682.jpg?w=0&h=0&q=100&dpr=1&fit=crop&s=1JSGnrxCVKlwjL89p_cJxw")' }}>
                                                                         <div className="absolute left-0 bottom-0 p-4 text-white">
                                                                                 <p className="text-2xl font-bold">Phú Quốc</p>
@@ -243,7 +243,7 @@ const Hotel = () => {
                                 <div className="flex flex-col gap-4">
                                         <div className="flex gap-4">
                                                 <div className="w-[28%]">
-                                                        <Link href="">
+                                                        <Link href="/hotel/khach-san-ha-noi">
                                                                 <div className="bg-no-repeat bg-center bg-cover w-full h-full rounded-lg relative" style={{ backgroundImage: 'url("https://i1-dulich.vnecdn.net/2022/05/09/amiana-resort-nha-trang-2087-1-9439-2178-1652070682.jpg?w=0&h=0&q=100&dpr=1&fit=crop&s=1JSGnrxCVKlwjL89p_cJxw")' }}>
                                                                         <div className="absolute left-0 bottom-0 p-4 text-white">
                                                                                 <p className="text-2xl font-bold">Phú Quốc</p>
@@ -254,7 +254,7 @@ const Hotel = () => {
                                                 </div>
                                                 <div className="flex-1 grid grid-rows-2 gap-4">
                                                         <div>
-                                                                <Link href="">
+                                                                <Link href="/hotel/khach-san-ha-noi">
                                                                         <div className="bg-no-repeat bg-center bg-cover w-full h-[200px] rounded-lg relative" style={{ backgroundImage: 'url("https://i1-dulich.vnecdn.net/2022/05/09/amiana-resort-nha-trang-2087-1-9439-2178-1652070682.jpg?w=0&h=0&q=100&dpr=1&fit=crop&s=1JSGnrxCVKlwjL89p_cJxw")' }}>
                                                                                 <div className="absolute left-0 bottom-0 p-4 text-white">
                                                                                         <p className="text-2xl font-bold">Phú Quốc</p>

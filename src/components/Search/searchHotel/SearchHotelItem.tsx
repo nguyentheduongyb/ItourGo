@@ -8,7 +8,7 @@ import { MdLocationOn } from 'react-icons/md'
 
 const SearchItem = () => {
         return (
-                <Link href="/tour/tour-tim-kiem-1" className="rounded w-full p-1 bg-[#FBE4C0]">
+                <div className="rounded w-full p-1 bg-[#FBE4C0]">
                         <p className="flex items-center py-2 justify-center">
                                 <span className="flex items-center">
                                         <GoClock />
@@ -22,10 +22,10 @@ const SearchItem = () => {
                                 </span>
                         </p>
                         <div className="flex">
-                                <div className="w-56 h-44 bg-center bg-no-repeat bg-cover" style={{ backgroundImage: 'url("https://cdn1.ivivu.com/iVivu/2022/06/30/12/hinhdaidien-374x280.webp?o=jpg")' }}></div>
+                                <Link href="/tour/tour-1" className="w-56 h-44 bg-center bg-no-repeat bg-cover" style={{ backgroundImage: 'url("https://cdn1.ivivu.com/iVivu/2022/06/30/12/hinhdaidien-374x280.webp?o=jpg")' }}></Link>
                                 <div className="flex flex-1">
                                         <div className="p-4 bg-[#F9FAFA] w-9/12 flex flex-col justify-between">
-                                                <h3>Khu nghỉ dưỡng Mercure Đà Lạt</h3>
+                                                <Link href="/tour/tour-1">Khu nghỉ dưỡng Mercure Đà Lạt</Link>
                                                 <div className="flex gap-3 items-centers">
                                                         <div className="flex text-xl">
                                                                 <BiSolidStar color="#FDBF65" />
@@ -68,7 +68,7 @@ const SearchItem = () => {
 
                                 </div>
                         </div>
-                </Link>
+                </div>
         )
 }
 

@@ -9,7 +9,7 @@ import { BiShareAlt, BiSolidLike, BiSolidStar } from 'react-icons/bi'
 import Link from 'next/link'
 const SearchPage = () => {
         return (
-                <div className="container mt-2">
+                <div className="container pt-4">
                         <Search />
                         <div className="flex justify-between items-center py-4">
                                 <div className="flex items-center gap-8">
