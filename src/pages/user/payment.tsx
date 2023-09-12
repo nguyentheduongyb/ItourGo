@@ -1,21 +1,20 @@
 'use client'
 import { Fragment, useState, useContext } from "react"
+import { redirect } from 'next/navigation'
 import Link from "next/link"
 import axios from 'axios';
 import { Checkbox, Label, Button, TextInput, Tooltip, Modal } from "flowbite-react"
+import { useRouter } from 'next/navigation';
 
-import { BsInfoCircle } from "react-icons/bs"
-import { SiEthereum } from "react-icons/si"
-import { BsCheck2 } from "react-icons/bs"
-import { LuCopy } from "react-icons/lu"
-import { log } from "console";
+import { HiOutlineExclamationCircle } from "react-icons/hi";
 
 
 const Payment = () => {
 
-
+        const { push } = useRouter();
 
         const [show, setShow] = useState(false)
+        const [confirm, setConfirm] = useState(false)
         const [quantity, setQuantity] = useState(1)
         const [price, setPrice] = useState(150000)
         const [total, setTotal] = useState(price)
@@ -46,6 +45,18 @@ const Payment = () => {
                                 console.log(err);
 
                         })
+        }
+
+        const handleSuccess = () => {
+
+
+                setConfirm(false)
+                setShow(false)
+                push('/account?tab=order')
+        }
+        const handleCancel = () => {
+                setConfirm(false)
+                setShow(false)
         }
         return (
                 <div>
@@ -117,12 +128,13 @@ const Payment = () => {
                                 </div>
                         </div>
 
-                        <Modal show={show} size="lg" onClose={() => { setShow(false) }}>
+                        <Modal show={show} size="lg" onClose={() => { setConfirm(true) }}>
                                 <Modal.Header className="p-2" />
-                                <h1 className="text-center text-2xl uppercase mt-3 text-medium">Thanh toán tour du lịch</h1>
+                                <h1 className="text-center text-2xl uppercase mt-2 text-medium">Thanh toán tour du lịch</h1>
                                 <Modal.Body>
-                                        <div className="border rounded flex flex-col items-center justify-center">
+                                        <div className="border rounded flex flex-col items-center justify-center pb-6">
                                                 <img className="w-full" src={imageQR} alt="" />
+                                                <Button className="rounded-full" color="success" onClick={handleSuccess}>Đã chuyển tiền! Thông báo cho người bán</Button>
                                         </div>
                                         {/* <div className="flex flex-col gap-6">
                                                 <div className="border border-dotted py-3 px-4 rounded flex items-center gap-8">
@@ -151,6 +163,25 @@ const Payment = () => {
                                                         </div>
                                                 </div>
                                         </div> */}
+                                </Modal.Body>
+                        </Modal>
+
+                        <Modal show={confirm} size="md" popup>
+                                <Modal.Body className="pt-4">
+                                        <div className="text-center">
+                                                <HiOutlineExclamationCircle className="mx-auto mb-4 h-14 w-14 text-gray-400 dark:text-gray-200" />
+                                                <h3 className="mb-5 text-lg font-normal text-gray-500 dark:text-gray-400">
+                                                        Nếu bạn đã thanh toán dịch vụ này! Vui lòng chọn đã thanh toán
+                                                </h3>
+                                                <div className="flex justify-center gap-4">
+                                                        <Button color="success" onClick={handleSuccess}>
+                                                                Tôi đã thanh toán
+                                                        </Button>
+                                                        <Button color="failure" onClick={handleCancel}>
+                                                                Tôi muốn hủy
+                                                        </Button>
+                                                </div>
+                                        </div>
                                 </Modal.Body>
                         </Modal>
                 </div>

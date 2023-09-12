@@ -3,7 +3,7 @@ import { Fragment, useState } from "react"
 import { BsSearch } from "react-icons/bs"
 
 import Item from "./OrderItem"
-const Order = () => {
+const OrderDetail = () => {
         const [tab, setTab] = useState(1)
         const [focusInput, setFocusInput] = useState(false)
         const handleChangeTab = (e: any) => {
@@ -12,7 +12,7 @@ const Order = () => {
         return (
                 <div className="w-full">
                         <ul className="mb-5 flex w-full justify-between bg-gradient-to-r from-slate-50 to-cyan-50 text-black rounded">
-                                <li onClick={handleChangeTab} id="1" className={`${tab == 1 ? 'text-[var(--text-primary)] border-b border-[var(--text-primary)] border-b-[3px]' : ''} cursor-pointer hover:text-[var(--text-primary)] text-center py-3 w-[calc(100%/5)]`}>
+                                <li onClick={handleChangeTab} id="1" className={`${tab == 1 ? 'text-[var(--text-primary)] bDetail-b border-[var(--text-primary)] border-b-[3px]' : ''} cursor-pointer hover:text-[var(--text-primary)] text-center py-3 w-[calc(100%/5)]`}>
                                         Tất cả
                                 </li>
                                 <li onClick={handleChangeTab} id="2" className={`${tab == 2 ? 'text-[var(--text-primary)] border-b border-[var(--text-primary)] border-b-[3px]' : ''} cursor-pointer hover:text-[var(--text-primary)] text-center py-3 w-[calc(100%/5)]`}>
@@ -37,4 +37,4 @@ const Order = () => {
                 </div>
         )
 }
-export default Order
+export default OrderDetail

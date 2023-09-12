@@ -3,16 +3,17 @@ import Payment from "~/components/profile/Payment";
 import Address from "~/components/profile/Address";
 import Order from "~/components/profile/Order";
 const Content = ({ tab }: any) => {
+
         switch (tab) {
-                case "1":
+                case "undefined":
                         return <Ledger />
-                case "2":
+                case "undefined":
                         return <Payment />
-                case "3":
+                case "undefined":
                         return <Address />
-                case "4":
+                case "undefined":
                         return <Address />
-                case "5":
+                case "order":
                         return <Order />
                 default:
                         return <Ledger />

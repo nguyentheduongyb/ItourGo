@@ -10,14 +10,15 @@ const Item = () => {
                                         <div className="flex gap-2 items-center"><span>Đơn hàng đã được giao thành công</span><BsQuestionCircle /><span>|</span><span>Hoàn thành</span></div>
                                 </div>
                                 <div className="py-3 flex gap-4">
-                                        <div className="border w-[80px] h-[80px] bg-no-repeat bg-center bg-cover" style={{ backgroundImage: "url('https://down-vn.img.susercontent.com/file/vn-11134207-7qukw-lg97sxvat7uf19_tn')" }} />
-                                        <div className="w-full flex gap-18 justify-between items-center">
+                                        <div className="border w-[100px] h-[100px] bg-no-repeat bg-center bg-cover rounded-xl" style={{ backgroundImage: "url('https://htmldesigntemplates.com/html/travelin/images/destination/destination17.jpg')" }} />
+                                        <div className="flex-1 flex gap-18 justify-between items-center">
                                                 <div>
-                                                        <span>[Mã TOPMAY giảm đến 25k đơn 150k] Áo thun Drew local brand phông Gấu Hồng Lotso Unisex nam nữ bigsize Love Studio</span>
-                                                        <p className="my-3">Phân loại hàng: Drew gấu trắng A089</p>
+                                                        <span>Four Islands Excursion in South Phu Quoc - Day Tour</span>
+                                                        <p className="my-3">Phân loại hàng: Tour</p>
                                                         <div>x1</div>
-                                                        <Link href="/" className="border border-[var(--text-primary)] text-sm py-1 px-2">7 ngày trả hàng</Link>
+                                                        <Link href="/" className="border border-[var(--text-primary)] text-sm py-1 px-2">Đếm ngược 7 ngày khởi hành</Link>
                                                 </div>
+                                                <button className="px-4 py-2 rounded bg-green-600 text-xs text-white">Chờ thanh toán</button>
                                                 <span>99.000đ</span>
                                         </div>
                                 </div>
