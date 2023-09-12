@@ -28,7 +28,7 @@ const Login = () => {
                                         <div className="mb-5">
                                                 <TextInput
                                                         name="password"
-                                                        placeholder="Password"
+                                                        placeholder="Mật khẩu"
                                                         required
                                                         type="password"
                                                 // {...register("password")}

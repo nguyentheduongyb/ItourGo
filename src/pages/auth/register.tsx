@@ -18,12 +18,12 @@ const Register = () => {
                                                 <div className="mb-2 block">
                                                         <Label
                                                                 htmlFor="username"
-                                                                value="User Name"
+                                                                value="Tên người dùng"
                                                         />
                                                 </div>
                                                 <TextInput
                                                         id="username"
-                                                        placeholder="User Name"
+                                                        placeholder="Tên người dùng"
                                                         required
                                                         shadow
                                                         type="text"
@@ -34,7 +34,7 @@ const Register = () => {
                                                 <div className="mb-2 block">
                                                         <Label
                                                                 htmlFor="email"
-                                                                value="Your email"
+                                                                value="Email của bạn"
                                                         />
                                                 </div>
                                                 <TextInput
@@ -51,7 +51,7 @@ const Register = () => {
                                                 <div className="mb-2 block">
                                                         <Label
                                                                 htmlFor="password"
-                                                                value="Your password"
+                                                                value="Mật khẩu của bạn"
                                                         />
                                                 </div>
                                                 <TextInput
@@ -67,7 +67,7 @@ const Register = () => {
                                                 <div className="mb-2 block">
                                                         <Label
                                                                 htmlFor="repeat-password"
-                                                                value="Repeat password"
+                                                                value="Nhập lại mật khẩu"
                                                         />
                                                 </div>
                                                 <TextInput
