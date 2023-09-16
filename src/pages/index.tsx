@@ -4,6 +4,7 @@ import { Button, Checkbox, Label, TextInput, Select } from 'flowbite-react';
 import { BsCalendarWeek } from "react-icons/bs"
 import { BsSearch } from "react-icons/bs"
 import { FaHotel } from "react-icons/fa"
+import { BiSolidStar } from 'react-icons/bi';
 const Home = () => {
   return (
     <div>
@@ -17,6 +18,90 @@ const Home = () => {
               <h1 className="mb-8 text-[#D0E3F0] text-lg font-semibold capitalize">Bắt đầu lên kế hoạch cho chuyến đi mơ ước của bạn ngay hôm nay!</h1>
               <p className="mb-16">Tìm những địa điểm tuyệt vời để lưu trú, ăn uống, mua sắm hoặc ghé thăm từ các chuyên gia địa phương</p>
 
+              <div className="flex h-[52px] gap-4 mb-12">
+                <button className="px-3 h-full flex gap-2 items-center rounded bg-[color:var(--primary-color)] text-white"><FaHotel /><span className="font-semibold">Tour</span></button>
+                <button className="px-3 h-full flex gap-2 bg-white items-center rounded"><FaHotel /><span className="font-semibold">Khách sạn</span></button>
+                <button className="px-3 h-full flex gap-2 bg-white items-center rounded"><FaHotel /><span className="font-semibold">Nhà hàng</span></button>
+                <button className="px-3 h-full flex gap-2 bg-white items-center rounded"><FaHotel /><span className="font-semibold">Mã giảm giá</span></button>
+              </div>
+
+              {/* <form className='' action="">
+                <div className="w-full grid grid-cols-2 gap-8">
+                  <TextInput
+                    id="destination"
+                    placeholder="Điểm đến"
+                    required
+                    type="text"
+                    sizing="lg"
+                  />
+                  <Select
+                    id="countries"
+                    required
+                    sizing="lg"
+                  >
+                    <option>
+                      Package Tour
+                    </option>
+                    <option>
+                      Daily Tour
+                    </option>
+                    <option>
+                      Tour Fixed
+                    </option>
+
+                  </Select>
+                </div>
+                <div className="w-full grid grid-cols-2 gap-8 mt-4">
+                  <TextInput
+                    id="destination"
+                    placeholder="Ngày khởi hành"
+                    required
+                    type="text"
+                    sizing="lg"
+                  />
+                  <TextInput
+                    id="destination"
+                    placeholder="Khởi hành từ"
+                    required
+                    type="text"
+                    sizing="lg"
+                  />
+                </div>
+                <Link href="/search/search">
+                  <Button className="w-full mt-6" size="lg"><span className="flex items-center gap-2"><BsSearch />Tìm kiếm ngay</span></Button>
+                </Link>
+              </form> */}
+
+              {/* <form className='' action="">
+                <div className="w-full grid grid-cols-2 gap-8">
+                  <TextInput
+                    id="destination"
+                    placeholder="Điểm đến"
+                    required
+                    type="text"
+                    sizing="lg"
+                  />
+                  <TextInput
+                    id="destination"
+                    placeholder="2 người lớn - 1 trẻ em"
+                    required
+                    type="text"
+                    sizing="lg"
+                  />
+                </div>
+                <div className="mt-4">
+                  <TextInput
+                    id="destination"
+                    placeholder="Ngày khởi hành"
+                    required
+                    type="text"
+                    sizing="lg"
+                  />
+                </div>
+                <Link href="/search/search">
+                  <Button className="w-full mt-6" size="lg"><span className="flex items-center gap-2"><BsSearch />Tìm kiếm ngay</span></Button>
+                </Link>
+              </form> */}
               <form className='' action="">
                 <div className="w-full grid grid-cols-2 gap-8">
                   <TextInput
@@ -32,31 +117,37 @@ const Home = () => {
                     sizing="lg"
                   >
                     <option>
-                      Hà Nội
+                      Package Tour
                     </option>
                     <option>
-                      Thành phố Hồ Chí Minh
+                      Daily Tour
                     </option>
                     <option>
-                      Nha Trang
+                      Tour Fixed
                     </option>
-                    <option>
-                      Đà Nẵng
-                    </option>
+
                   </Select>
+                </div>
+                <div className="w-full grid grid-cols-2 gap-8 mt-4">
+                  <TextInput
+                    id="destination"
+                    placeholder="Ngày khởi hành"
+                    required
+                    type="text"
+                    sizing="lg"
+                  />
+                  <TextInput
+                    id="destination"
+                    placeholder="Khởi hành từ"
+                    required
+                    type="text"
+                    sizing="lg"
+                  />
                 </div>
                 <Link href="/search/search">
                   <Button className="w-full mt-6" size="lg"><span className="flex items-center gap-2"><BsSearch />Tìm kiếm ngay</span></Button>
                 </Link>
               </form>
-
-              {/* <div className="flex h-[52px] gap-4 mt-12">
-                <button className="px-3 h-full flex gap-2 bg-white items-center rounded"><FaHotel /><span className="font-semibold">Khách sạn</span></button>
-                <button className="px-3 h-full flex gap-2 bg-white items-center rounded"><FaHotel /><span className="font-semibold">Nhà hàng</span></button>
-                <button className="px-3 h-full flex gap-2 bg-white items-center rounded"><FaHotel /><span className="font-semibold">Phương tiện</span></button>
-                <button className="px-3 h-full flex gap-2 bg-white items-center rounded"><FaHotel /><span className="font-semibold">Mã giảm giá</span></button>
-              </div> */}
-
 
 
             </div>
@@ -353,42 +444,45 @@ const Home = () => {
           <h3 className="text-5xl font-medium mb-8 capitalize">Gặp gỡ những hướng dẫn viên xuất sắc</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
         </div>
-        <div className="flex grid grid-cols-4 gap-8 mt-12">
+        <div className="flex grid grid-cols-6 gap-8 mt-12">
           <div className="overflow-hidden rounded-2xl bg-white drop-shadow-[0_0_10px_rgba(0,0,0,0.25)]">
-            <div className="bg-no-repeat bg-center bg-cover w-full pt-[109%]" style={{ backgroundImage: 'url("https://sohanews.sohacdn.com/thumb_w/660/160588918557773824/2022/11/5/photo1667607552661-16676075527751241222501.jpg")' }}>
+            <div className="bg-no-repeat bg-center bg-cover w-full pt-[109%]" style={{ backgroundImage: 'url("https://down-vn.img.susercontent.com/file/4a869c76e6a105360f55058892d7d722_tn")' }}>
 
             </div>
-            <div className="bg-[color:var(--primary-color)] text-center text-white py-2">
-              <h1 className="text-2xl font-medium">Thùy Tiên</h1>
-              <h3 className="text-lg font-medium capitalize">hướng dẫn viên</h3>
+            <div className="bg-[color:var(--primary-color)] text-white py-2">
+              <h1 className="text-2xl font-medium text-center">365 Travel</h1>
+              <p className='mt-2 px-4 line-clamp-1 text-xs underline'>Hơn 200 tour trong và ngoài nước</p>
+              <h3 className="mt-1 px-4 line-clamp-1 flex gap-2 items-center text-xs"><span className='text-red-600'>Đánh giá:</span><span className="flex gap-1 text-yellow-200"><BiSolidStar /><BiSolidStar /><BiSolidStar /><BiSolidStar /></span></h3>
             </div>
           </div>
           <div className="overflow-hidden rounded-2xl bg-white drop-shadow-[0_0_10px_rgba(0,0,0,0.25)]">
-            <div className="bg-no-repeat bg-center bg-cover w-full pt-[109%]" style={{ backgroundImage: 'url("https://sohanews.sohacdn.com/thumb_w/660/160588918557773824/2022/11/5/photo1667607552661-16676075527751241222501.jpg")' }}>
+            <div className="bg-no-repeat bg-center bg-cover w-full pt-[109%]" style={{ backgroundImage: 'url("https://down-vn.img.susercontent.com/file/4a869c76e6a105360f55058892d7d722_tn")' }}>
 
             </div>
-            <div className="bg-[color:var(--primary-color)] text-center text-white py-2">
-              <h1 className="text-2xl font-medium">Thùy Tiên</h1>
-              <h3 className="text-lg font-medium capitalize">hướng dẫn viên</h3>
-            </div>
-          </div>
-
-          <div className="overflow-hidden rounded-2xl bg-white drop-shadow-[0_0_10px_rgba(0,0,0,0.25)]">
-            <div className="bg-no-repeat bg-center bg-cover w-full pt-[109%]" style={{ backgroundImage: 'url("https://sohanews.sohacdn.com/thumb_w/660/160588918557773824/2022/11/5/photo1667607552661-16676075527751241222501.jpg")' }}>
-
-            </div>
-            <div className="bg-[color:var(--primary-color)] text-center text-white py-2">
-              <h1 className="text-2xl font-medium">Thùy Tiên</h1>
-              <h3 className="text-lg font-medium capitalize">hướng dẫn viên</h3>
+            <div className="bg-[color:var(--primary-color)] text-white py-2">
+              <h1 className="text-2xl font-medium text-center">365 Travel</h1>
+              <p className='mt-2 px-4 line-clamp-1 text-xs underline'>Hơn 200 tour trong và ngoài nước</p>
+              <h3 className="mt-1 px-4 line-clamp-1 flex gap-2 items-center text-xs"><span className='text-red-600'>Đánh giá:</span><span className="flex gap-1 text-yellow-200"><BiSolidStar /><BiSolidStar /><BiSolidStar /><BiSolidStar /></span></h3>
             </div>
           </div>
           <div className="overflow-hidden rounded-2xl bg-white drop-shadow-[0_0_10px_rgba(0,0,0,0.25)]">
-            <div className="bg-no-repeat bg-center bg-cover w-full pt-[109%]" style={{ backgroundImage: 'url("https://sohanews.sohacdn.com/thumb_w/660/160588918557773824/2022/11/5/photo1667607552661-16676075527751241222501.jpg")' }}>
+            <div className="bg-no-repeat bg-center bg-cover w-full pt-[109%]" style={{ backgroundImage: 'url("https://down-vn.img.susercontent.com/file/4a869c76e6a105360f55058892d7d722_tn")' }}>
 
             </div>
-            <div className="bg-[color:var(--primary-color)] text-center text-white py-2">
-              <h1 className="text-2xl font-medium">Thùy Tiên</h1>
-              <h3 className="text-lg font-medium capitalize">hướng dẫn viên</h3>
+            <div className="bg-[color:var(--primary-color)] text-white py-2">
+              <h1 className="text-2xl font-medium text-center">365 Travel</h1>
+              <p className='mt-2 px-4 line-clamp-1 text-xs underline'>Hơn 200 tour trong và ngoài nước</p>
+              <h3 className="mt-1 px-4 line-clamp-1 flex gap-2 items-center text-xs"><span className='text-red-600'>Đánh giá:</span><span className="flex gap-1 text-yellow-200"><BiSolidStar /><BiSolidStar /><BiSolidStar /><BiSolidStar /></span></h3>
+            </div>
+          </div>
+          <div className="overflow-hidden rounded-2xl bg-white drop-shadow-[0_0_10px_rgba(0,0,0,0.25)]">
+            <div className="bg-no-repeat bg-center bg-cover w-full pt-[109%]" style={{ backgroundImage: 'url("https://down-vn.img.susercontent.com/file/4a869c76e6a105360f55058892d7d722_tn")' }}>
+
+            </div>
+            <div className="bg-[color:var(--primary-color)] text-white py-2">
+              <h1 className="text-2xl font-medium text-center">365 Travel</h1>
+              <p className='mt-2 px-4 line-clamp-1 text-xs underline'>Hơn 200 tour trong và ngoài nước</p>
+              <h3 className="mt-1 px-4 line-clamp-1 flex gap-2 items-center text-xs"><span className='text-red-600'>Đánh giá:</span><span className="flex gap-1 text-yellow-200"><BiSolidStar /><BiSolidStar /><BiSolidStar /><BiSolidStar /></span></h3>
             </div>
           </div>
         </div>
