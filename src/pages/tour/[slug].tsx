@@ -5,7 +5,7 @@ import Link from 'next/link'
 import { MdLocationOn } from "react-icons/md"
 import { GoClock } from "react-icons/go"
 import { BsCheckLg } from "react-icons/bs"
-import { BiBus, BiSolidPlane, BiSolidLike, BiShareAlt } from "react-icons/bi"
+import { BiBus, BiSolidPlane, BiSolidLike, BiShareAlt, BiSolidStar } from "react-icons/bi"
 import { HiOutlineInformationCircle } from "react-icons/hi"
 const TourDetail = () => {
         return (
@@ -31,7 +31,10 @@ const TourDetail = () => {
                                                                         <BiSolidPlane />
                                                                 </div>
                                                         </div>
-                                                        <div className="flex items-center px-4 py-1 rounded-full bg-blue-200 text-sm font-bold">TO2244</div>
+                                                        <div className='flex flex-col justify-center items-center gap-1'>
+                                                                <Link href="/agency/hello-1" className="flex items-center h-16 w-16 justify-center rounded-full bg-blue-200 text-sm font-bold"><button>365 Travel</button></Link>
+                                                                <div className="flex gap-2 text-xs"><BiSolidStar /><BiSolidStar /><BiSolidStar /><BiSolidStar /><BiSolidStar /></div>
+                                                        </div>
                                                 </div>
                                                 <div className="w-full mt-6">
                                                         <div className="w-full bg-no-repeat bg-center bg-cover pt-[52.4%]" style={{ backgroundImage: 'url("https://cdn2.ivivu.com/2023/03/15/15/ivivu-le-giang-750x390.gif")' }}></div>

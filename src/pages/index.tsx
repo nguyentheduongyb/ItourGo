@@ -440,8 +440,8 @@ const Home = () => {
       {/* Tour Guides */}
       <div className="container pt-12">
         <div className='text-center'>
-          <h1 className="text-2xl text-[color:var(--primary-color)] font-bold mb-6 capitalize">Hướng dẫn viên du lịch</h1>
-          <h3 className="text-5xl font-medium mb-8 capitalize">Gặp gỡ những hướng dẫn viên xuất sắc</h3>
+          <h1 className="text-2xl text-[color:var(--primary-color)] font-bold mb-6 capitalize">Các đại lý được ưa chuộng nhất</h1>
+          <h3 className="text-5xl font-medium mb-8 capitalize">Tham khảo tour của các đại lý hàng đầu của chúng tôi</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
         </div>
         <div className="flex grid grid-cols-6 gap-8 mt-12">
