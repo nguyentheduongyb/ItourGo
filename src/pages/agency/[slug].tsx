@@ -6,8 +6,6 @@ import { BsShop } from "react-icons/bs"
 import { GoPlus } from "react-icons/go"
 
 const Agency = () => {
-
-
         return (
                 <div className="mt-12">
                         <div className="container">
@@ -68,9 +66,6 @@ const Agency = () => {
                                 </div>
                         </div>
 
-
-
-
                         {/* Tab */}
                         <div className="mt-8 border-b w-full">
                                 <div className="container">
@@ -99,7 +94,6 @@ const Agency = () => {
                                 </div>
 
                         </div>
-
 
                         <div className="bg-[#ccc] py-4">
                                 <div className="container">
@@ -241,8 +235,6 @@ const Agency = () => {
                                 </div>
 
                         </div>
-
-
                         <div className="container pt-12">
                                 <div className='text-center'>
                                         <h1 className="text-2xl text-[color:var(--primary-color)] font-bold mb-6 capitalize">Các đại lý khác</h1>
@@ -292,6 +284,8 @@ const Agency = () => {
                                         </div>
                                 </div>
                         </div>
+
+
 
                 </div>
         )

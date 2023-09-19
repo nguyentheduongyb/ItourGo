@@ -445,7 +445,7 @@ const Home = () => {
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
         </div>
         <div className="flex grid grid-cols-6 gap-8 mt-12">
-          <div className="overflow-hidden rounded-2xl bg-white drop-shadow-[0_0_10px_rgba(0,0,0,0.25)]">
+          <Link href="/agency/ab-1" className="overflow-hidden rounded-2xl bg-white drop-shadow-[0_0_10px_rgba(0,0,0,0.25)]">
             <div className="bg-no-repeat bg-center bg-cover w-full pt-[109%]" style={{ backgroundImage: 'url("https://down-vn.img.susercontent.com/file/4a869c76e6a105360f55058892d7d722_tn")' }}>
 
             </div>
@@ -454,8 +454,8 @@ const Home = () => {
               <p className='mt-2 px-4 line-clamp-1 text-xs underline'>Hơn 200 tour trong và ngoài nước</p>
               <h3 className="mt-1 px-4 line-clamp-1 flex gap-2 items-center text-xs"><span className='text-red-600'>Đánh giá:</span><span className="flex gap-1 text-yellow-200"><BiSolidStar /><BiSolidStar /><BiSolidStar /><BiSolidStar /></span></h3>
             </div>
-          </div>
-          <div className="overflow-hidden rounded-2xl bg-white drop-shadow-[0_0_10px_rgba(0,0,0,0.25)]">
+          </Link>
+          <Link href="/agency/ab-1" className="overflow-hidden rounded-2xl bg-white drop-shadow-[0_0_10px_rgba(0,0,0,0.25)]">
             <div className="bg-no-repeat bg-center bg-cover w-full pt-[109%]" style={{ backgroundImage: 'url("https://down-vn.img.susercontent.com/file/4a869c76e6a105360f55058892d7d722_tn")' }}>
 
             </div>
@@ -464,8 +464,8 @@ const Home = () => {
               <p className='mt-2 px-4 line-clamp-1 text-xs underline'>Hơn 200 tour trong và ngoài nước</p>
               <h3 className="mt-1 px-4 line-clamp-1 flex gap-2 items-center text-xs"><span className='text-red-600'>Đánh giá:</span><span className="flex gap-1 text-yellow-200"><BiSolidStar /><BiSolidStar /><BiSolidStar /><BiSolidStar /></span></h3>
             </div>
-          </div>
-          <div className="overflow-hidden rounded-2xl bg-white drop-shadow-[0_0_10px_rgba(0,0,0,0.25)]">
+          </Link>
+          <Link href="/agency/ab-1" className="overflow-hidden rounded-2xl bg-white drop-shadow-[0_0_10px_rgba(0,0,0,0.25)]">
             <div className="bg-no-repeat bg-center bg-cover w-full pt-[109%]" style={{ backgroundImage: 'url("https://down-vn.img.susercontent.com/file/4a869c76e6a105360f55058892d7d722_tn")' }}>
 
             </div>
@@ -474,8 +474,8 @@ const Home = () => {
               <p className='mt-2 px-4 line-clamp-1 text-xs underline'>Hơn 200 tour trong và ngoài nước</p>
               <h3 className="mt-1 px-4 line-clamp-1 flex gap-2 items-center text-xs"><span className='text-red-600'>Đánh giá:</span><span className="flex gap-1 text-yellow-200"><BiSolidStar /><BiSolidStar /><BiSolidStar /><BiSolidStar /></span></h3>
             </div>
-          </div>
-          <div className="overflow-hidden rounded-2xl bg-white drop-shadow-[0_0_10px_rgba(0,0,0,0.25)]">
+          </Link>
+          <Link href="/agency/ab-1" className="overflow-hidden rounded-2xl bg-white drop-shadow-[0_0_10px_rgba(0,0,0,0.25)]">
             <div className="bg-no-repeat bg-center bg-cover w-full pt-[109%]" style={{ backgroundImage: 'url("https://down-vn.img.susercontent.com/file/4a869c76e6a105360f55058892d7d722_tn")' }}>
 
             </div>
@@ -484,7 +484,18 @@ const Home = () => {
               <p className='mt-2 px-4 line-clamp-1 text-xs underline'>Hơn 200 tour trong và ngoài nước</p>
               <h3 className="mt-1 px-4 line-clamp-1 flex gap-2 items-center text-xs"><span className='text-red-600'>Đánh giá:</span><span className="flex gap-1 text-yellow-200"><BiSolidStar /><BiSolidStar /><BiSolidStar /><BiSolidStar /></span></h3>
             </div>
-          </div>
+          </Link>
+
+          <Link href="/agency/ab-1" className="overflow-hidden rounded-2xl bg-white drop-shadow-[0_0_10px_rgba(0,0,0,0.25)]">
+            <div className="bg-no-repeat bg-center bg-cover w-full pt-[109%]" style={{ backgroundImage: 'url("https://down-vn.img.susercontent.com/file/4a869c76e6a105360f55058892d7d722_tn")' }}>
+
+            </div>
+            <div className="bg-[color:var(--primary-color)] text-white py-2">
+              <h1 className="text-2xl font-medium text-center">365 Travel</h1>
+              <p className='mt-2 px-4 line-clamp-1 text-xs underline'>Hơn 200 tour trong và ngoài nước</p>
+              <h3 className="mt-1 px-4 line-clamp-1 flex gap-2 items-center text-xs"><span className='text-red-600'>Đánh giá:</span><span className="flex gap-1 text-yellow-200"><BiSolidStar /><BiSolidStar /><BiSolidStar /><BiSolidStar /></span></h3>
+            </div>
+          </Link>
         </div>
       </div>
 
