@@ -5,7 +5,16 @@ import { BsCalendarWeek } from "react-icons/bs"
 import { BsSearch } from "react-icons/bs"
 import { FaHotel } from "react-icons/fa"
 import { BiSolidStar } from 'react-icons/bi';
+import { useState } from 'react';
 const Home = () => {
+
+
+  const [tab, setTab] = useState("1")
+
+  const handleChangeTab = (e: any) => {
+
+    setTab(e.currentTarget.getAttribute('id'))
+  }
   return (
     <div>
 
@@ -19,90 +28,13 @@ const Home = () => {
               <p className="mb-16">Tìm những địa điểm tuyệt vời để lưu trú, ăn uống, mua sắm hoặc ghé thăm từ các chuyên gia địa phương</p>
 
               <div className="flex h-[52px] gap-4 mb-12">
-                <button className="px-3 h-full flex gap-2 items-center rounded bg-[color:var(--primary-color)] text-white"><FaHotel /><span className="font-semibold">Tour</span></button>
-                <button className="px-3 h-full flex gap-2 bg-white items-center rounded"><FaHotel /><span className="font-semibold">Khách sạn</span></button>
-                <button className="px-3 h-full flex gap-2 bg-white items-center rounded"><FaHotel /><span className="font-semibold">Nhà hàng</span></button>
-                <button className="px-3 h-full flex gap-2 bg-white items-center rounded"><FaHotel /><span className="font-semibold">Mã giảm giá</span></button>
+                <button id="1" onClick={handleChangeTab} className={`px-3 h-full flex gap-2 items-center rounded ${tab == "1" ? 'bg-[color:var(--primary-color)] text-white' : 'bg-white text-black'}`}><FaHotel /><span className="font-semibold">Tour</span></button>
+                <button id="2" onClick={handleChangeTab} className={`px-3 h-full flex gap-2 items-center rounded ${tab == "2" ? 'bg-[color:var(--primary-color)] text-white' : 'bg-white text-black'}`}><FaHotel /><span className="font-semibold">Khách sạn</span></button>
+                <button id="3" onClick={handleChangeTab} className={`px-3 h-full flex gap-2 items-center rounded ${tab == "3" ? 'bg-[color:var(--primary-color)] text-white' : 'bg-white text-black'}`}><FaHotel /><span className="font-semibold">Nhà hàng</span></button>
+                <button id="4" onClick={handleChangeTab} className={`px-3 h-full flex gap-2 items-center rounded ${tab == "4" ? 'bg-[color:var(--primary-color)] text-white' : 'bg-white text-black'}`}><FaHotel /><span className="font-semibold">Vé máy bay</span></button>
               </div>
 
-              {/* <form className='' action="">
-                <div className="w-full grid grid-cols-2 gap-8">
-                  <TextInput
-                    id="destination"
-                    placeholder="Điểm đến"
-                    required
-                    type="text"
-                    sizing="lg"
-                  />
-                  <Select
-                    id="countries"
-                    required
-                    sizing="lg"
-                  >
-                    <option>
-                      Package Tour
-                    </option>
-                    <option>
-                      Daily Tour
-                    </option>
-                    <option>
-                      Tour Fixed
-                    </option>
-
-                  </Select>
-                </div>
-                <div className="w-full grid grid-cols-2 gap-8 mt-4">
-                  <TextInput
-                    id="destination"
-                    placeholder="Ngày khởi hành"
-                    required
-                    type="text"
-                    sizing="lg"
-                  />
-                  <TextInput
-                    id="destination"
-                    placeholder="Khởi hành từ"
-                    required
-                    type="text"
-                    sizing="lg"
-                  />
-                </div>
-                <Link href="/search/search">
-                  <Button className="w-full mt-6" size="lg"><span className="flex items-center gap-2"><BsSearch />Tìm kiếm ngay</span></Button>
-                </Link>
-              </form> */}
-
-              {/* <form className='' action="">
-                <div className="w-full grid grid-cols-2 gap-8">
-                  <TextInput
-                    id="destination"
-                    placeholder="Điểm đến"
-                    required
-                    type="text"
-                    sizing="lg"
-                  />
-                  <TextInput
-                    id="destination"
-                    placeholder="2 người lớn - 1 trẻ em"
-                    required
-                    type="text"
-                    sizing="lg"
-                  />
-                </div>
-                <div className="mt-4">
-                  <TextInput
-                    id="destination"
-                    placeholder="Ngày khởi hành"
-                    required
-                    type="text"
-                    sizing="lg"
-                  />
-                </div>
-                <Link href="/search/search">
-                  <Button className="w-full mt-6" size="lg"><span className="flex items-center gap-2"><BsSearch />Tìm kiếm ngay</span></Button>
-                </Link>
-              </form> */}
-              <form className='' action="">
+              <form className={`${tab == "1" ? 'block' : 'hidden'}`} action="">
                 <div className="w-full grid grid-cols-2 gap-8">
                   <TextInput
                     id="destination"
@@ -149,6 +81,115 @@ const Home = () => {
                 </Link>
               </form>
 
+              <form className={`${tab == "2" ? 'block' : 'hidden'}`} action="">
+                <div className="w-full grid grid-cols-2 gap-8">
+                  <TextInput
+                    id="destination"
+                    placeholder="Điểm đến"
+                    required
+                    type="text"
+                    sizing="lg"
+                  />
+                  <TextInput
+                    id="destination"
+                    placeholder="2 người lớn - 1 trẻ em"
+                    required
+                    type="text"
+                    sizing="lg"
+                  />
+                </div>
+                <div className="mt-4">
+                  <TextInput
+                    id="destination"
+                    placeholder="Ngày khởi hành"
+                    required
+                    type="text"
+                    sizing="lg"
+                  />
+                </div>
+                <Link href="/search/search">
+                  <Button className="w-full mt-6" size="lg"><span className="flex items-center gap-2"><BsSearch />Tìm kiếm ngay</span></Button>
+                </Link>
+              </form>
+              <form className={`${tab == "3" ? 'block' : 'hidden'}`} action="">
+                <div className="w-full grid grid-cols-2 gap-8">
+                  <TextInput
+                    id="destination"
+                    placeholder="Địa điểm"
+                    required
+                    type="text"
+                    sizing="lg"
+                  />
+                  <Select
+                    id="star"
+                    required
+                    sizing="lg"
+                  >
+                    <option>
+                      5 sao
+                    </option>
+                    <option>
+                      4 sao
+                    </option>
+                    <option>
+                      3 sao
+                    </option>
+                    <option>
+                      1 sao
+                    </option>
+                    <option>
+                      1 sao
+                    </option>
+                  </Select>
+                </div>
+
+                <Link href="/search/search">
+                  <Button className="w-full mt-6" size="lg"><span className="flex items-center gap-2"><BsSearch />Tìm kiếm ngay</span></Button>
+                </Link>
+              </form>
+              <form className={`${tab == "4" ? 'block' : 'hidden'}`} action="">
+                <div className="w-full grid grid-cols-2 gap-8">
+                  <TextInput
+                    id="destination"
+                    placeholder="Điểm đến"
+                    required
+                    type="text"
+                    sizing="lg"
+                  />
+                  <Select
+                    id="countries"
+                    required
+                    sizing="lg"
+                  >
+                    <option>
+                      Vé Vip
+                    </option>
+                    <option>
+                      Vé Thường
+                    </option>
+
+                  </Select>
+                </div>
+                <div className="w-full grid grid-cols-2 gap-8 mt-4">
+                  <TextInput
+                    id="destination"
+                    placeholder="Ngày khởi hành"
+                    required
+                    type="text"
+                    sizing="lg"
+                  />
+                  <TextInput
+                    id="destination"
+                    placeholder="Khởi hành từ"
+                    required
+                    type="text"
+                    sizing="lg"
+                  />
+                </div>
+                <Link href="/search/search">
+                  <Button className="w-full mt-6" size="lg"><span className="flex items-center gap-2"><BsSearch />Tìm kiếm ngay</span></Button>
+                </Link>
+              </form>
 
             </div>
 
@@ -437,6 +478,139 @@ const Home = () => {
         </div>
       </div>
 
+      {/* Best Tours Packages */}
+      <div className="container pt-12">
+        <div>
+          <h1 className="text-2xl text-[color:var(--primary-color)] font-bold mb-6 capitalize">Lựa chọn hàng đầu</h1>
+          <h3 className="text-5xl font-medium mb-8 capitalize">Last Minute Deal</h3>
+          <p>Lựa chọn gói du lịch tốt nhất với chi phí phù hợp với chương trình và có được các trải nghiệm tuyệt vời.</p>
+        </div>
+        <div className="flex grid grid-cols-3 gap-8 mt-12">
+          <Link href="/tour/day-la-bai-viet-1" className="overflow-hidden rounded-2xl bg-white drop-shadow-[0_0_10px_rgba(0,0,0,0.25)]">
+            <div className="relative">
+              <img className="w-full" src="https://media.vietravel.com/images/Content/ba-na-hills.jpg" alt="" />
+              <div className='absolute top-0 left-0 w-[150px] h-[150px]'>
+                {/* <span className='absolute rotate-[135deg] block text-center text-2xl font-bold text-yellow-500 uppercase w-[220px] py-6'>20% OFF</span> */}
+              </div>
+            </div>
+            <div className="">
+              <div className="p-4">
+                <div className="flex flex-col gap-4 pb-4 border-b border-dotted">
+                  <h3 className='text-[color:var(--primary-color)] text-fg font-semibold'>Đà Nẵng, Việt Nam</h3>
+                  <h4 className='text-3xl font-semibold'>Bà Nà Hills</h4>
+                  <p>Du khách có thể tham quan các ngôi chùa, thưởng ngoạn cảnh quan thiên nhiên tuyệt đẹp. Được ví von như một Châu Âu thu nhỏ</p>
+                </div>
+
+              </div>
+
+              <div className="p-4 flex gap-2">
+                <span>$170.00</span>
+                <i>|</i>
+                <span>Per person</span>
+              </div>
+            </div>
+          </Link>
+
+          <Link href="/tour/day-la-bai-viet-1" className="overflow-hidden rounded-2xl bg-white drop-shadow-[0_0_10px_rgba(0,0,0,0.25)]">
+            <div className="relative">
+              <img className="w-full" src="https://media.vietravel.com/images/Content/ba-na-hills.jpg" alt="" />
+              <div className='absolute top-0 left-0 w-[150px] h-[150px]'>
+                {/* <span className='absolute rotate-[135deg] block text-center text-2xl font-bold text-yellow-500 uppercase w-[220px] py-6'>20% OFF</span> */}
+              </div>
+            </div>
+            <div className="">
+              <div className="p-4">
+                <div className="flex flex-col gap-4 pb-4 border-b border-dotted">
+                  <h3 className='text-[color:var(--primary-color)] text-fg font-semibold'>Đà Nẵng, Việt Nam</h3>
+                  <h4 className='text-3xl font-semibold'>Bà Nà Hills</h4>
+                  <p>Du khách có thể tham quan các ngôi chùa, thưởng ngoạn cảnh quan thiên nhiên tuyệt đẹp. Được ví von như một Châu Âu thu nhỏ</p>
+                </div>
+
+              </div>
+
+              <div className="p-4 flex gap-2">
+                <span>$170.00</span>
+                <i>|</i>
+                <span>Per person</span>
+              </div>
+            </div>
+          </Link>
+          <Link href="/tour/day-la-bai-viet-1" className="overflow-hidden rounded-2xl bg-white drop-shadow-[0_0_10px_rgba(0,0,0,0.25)]">
+            <div className="relative">
+              <img className="w-full" src="https://media.vietravel.com/images/Content/ba-na-hills.jpg" alt="" />
+              <div className='absolute top-0 left-0 w-[150px] h-[150px]'>
+                {/* <span className='absolute rotate-[135deg] block text-center text-2xl font-bold text-yellow-500 uppercase w-[220px] py-6'>20% OFF</span> */}
+              </div>
+            </div>
+            <div className="">
+              <div className="p-4">
+                <div className="flex flex-col gap-4 pb-4 border-b border-dotted">
+                  <h3 className='text-[color:var(--primary-color)] text-fg font-semibold'>Đà Nẵng, Việt Nam</h3>
+                  <h4 className='text-3xl font-semibold'>Bà Nà Hills</h4>
+                  <p>Du khách có thể tham quan các ngôi chùa, thưởng ngoạn cảnh quan thiên nhiên tuyệt đẹp. Được ví von như một Châu Âu thu nhỏ</p>
+                </div>
+
+              </div>
+
+              <div className="p-4 flex gap-2">
+                <span>$170.00</span>
+                <i>|</i>
+                <span>Per person</span>
+              </div>
+            </div>
+          </Link>
+          <Link href="/tour/day-la-bai-viet-1" className="overflow-hidden rounded-2xl bg-white drop-shadow-[0_0_10px_rgba(0,0,0,0.25)]">
+            <div className="relative">
+              <img className="w-full" src="https://media.vietravel.com/images/Content/ba-na-hills.jpg" alt="" />
+              <div className='absolute top-0 left-0 w-[150px] h-[150px]'>
+                {/* <span className='absolute rotate-[135deg] block text-center text-2xl font-bold text-yellow-500 uppercase w-[220px] py-6'>20% OFF</span> */}
+              </div>
+            </div>
+            <div className="">
+              <div className="p-4">
+                <div className="flex flex-col gap-4 pb-4 border-b border-dotted">
+                  <h3 className='text-[color:var(--primary-color)] text-fg font-semibold'>Đà Nẵng, Việt Nam</h3>
+                  <h4 className='text-3xl font-semibold'>Bà Nà Hills</h4>
+                  <p>Du khách có thể tham quan các ngôi chùa, thưởng ngoạn cảnh quan thiên nhiên tuyệt đẹp. Được ví von như một Châu Âu thu nhỏ</p>
+                </div>
+
+              </div>
+
+              <div className="p-4 flex gap-2">
+                <span>$170.00</span>
+                <i>|</i>
+                <span>Per person</span>
+              </div>
+            </div>
+          </Link>
+          <Link href="/tour/day-la-bai-viet-1" className="overflow-hidden rounded-2xl bg-white drop-shadow-[0_0_10px_rgba(0,0,0,0.25)]">
+            <div className="relative">
+              <img className="w-full" src="https://media.vietravel.com/images/Content/ba-na-hills.jpg" alt="" />
+              <div className='absolute top-0 left-0 w-[150px] h-[150px]'>
+                {/* <span className='absolute rotate-[135deg] block text-center text-2xl font-bold text-yellow-500 uppercase w-[220px] py-6'>20% OFF</span> */}
+              </div>
+            </div>
+            <div className="">
+              <div className="p-4">
+                <div className="flex flex-col gap-4 pb-4 border-b border-dotted">
+                  <h3 className='text-[color:var(--primary-color)] text-fg font-semibold'>Đà Nẵng, Việt Nam</h3>
+                  <h4 className='text-3xl font-semibold'>Bà Nà Hills</h4>
+                  <p>Du khách có thể tham quan các ngôi chùa, thưởng ngoạn cảnh quan thiên nhiên tuyệt đẹp. Được ví von như một Châu Âu thu nhỏ</p>
+                </div>
+
+              </div>
+
+              <div className="p-4 flex gap-2">
+                <span>$170.00</span>
+                <i>|</i>
+                <span>Per person</span>
+              </div>
+            </div>
+          </Link>
+
+        </div>
+      </div>
+
       {/* Tour Guides */}
       <div className="container pt-12">
         <div className='text-center'>
@@ -580,7 +754,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-    </div>
+    </div >
   );
 }
 export default Home;

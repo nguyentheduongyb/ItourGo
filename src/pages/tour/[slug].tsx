@@ -377,6 +377,33 @@ const TourDetail = () => {
                                                 </Link>
                                         </div>
                                 </div>
+
+
+                                {/* Comment */}
+                                <div className="mt-12 w-3/5 p-8 bg-gray-300 rounded-xl border">
+                                        <h4 className="">Bình luận</h4>
+                                        <div className="py-4 border-b">
+                                                <textarea className="w-full rounded text-sm" placeholder="Mời bạn nhập bình luận" type="text" />
+                                        </div>
+                                        <div className="p-4">
+                                                <div className='mt-6'>
+                                                        <p className='text-sm font-bold'>Nguyễn Thế Dương</p>
+                                                        <p className='text-xs mt-2'>Công ty của mình có địa chỉ ở đâu ạ?</p>
+                                                </div>
+                                                <div className='mt-6'>
+                                                        <p className='text-sm font-bold'>Nguyễn Thế Dương</p>
+                                                        <p className='text-xs mt-2'>Công ty của mình có địa chỉ ở đâu ạ?</p>
+                                                </div>
+                                                <div className='mt-6'>
+                                                        <p className='text-sm font-bold'>Nguyễn Thế Dương</p>
+                                                        <p className='text-xs mt-2'>Công ty của mình có địa chỉ ở đâu ạ?</p>
+                                                </div>
+                                                <div className='mt-6'>
+                                                        <p className='text-sm font-bold'>Nguyễn Thế Dương</p>
+                                                        <p className='text-xs mt-2'>Công ty của mình có địa chỉ ở đâu ạ?</p>
+                                                </div>
+                                        </div>
+                                </div>
                         </div>
 
                 </div>
