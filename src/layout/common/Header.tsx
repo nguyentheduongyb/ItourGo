@@ -67,7 +67,7 @@ const Header = () => {
                                                                 <li className="p-3 border-b last:border-b-0 border-dotted hover:bg-[color:var(--primary-color)] hover:text-white"><Link className="block" href="">Du lịch nước ngoài</Link></li>
                                                         </ul>
                                                 </div>
-                                                <Link href="/" className="dropdown-hover uppercase flex items-center gap-1 relative py-3">Về chúng tôi</Link>
+                                                <Link href="/about" className="dropdown-hover uppercase flex items-center gap-1 relative py-3">Về chúng tôi</Link>
 
                                                 <Link href="/" className="dropdown-hover uppercase flex items-center gap-1 relative py-3">blog</Link>
                                                 <Link href="/" className="dropdown-hover uppercase flex items-center gap-1 relative py-3">Mã giảm giá</Link>
