@@ -383,7 +383,7 @@ const TourDetail = () => {
                                 <div className="mt-12 w-3/5 p-8 bg-gray-300 rounded-xl border">
                                         <h4 className="">Bình luận</h4>
                                         <div className="py-4 border-b">
-                                                <textarea className="w-full rounded text-sm" placeholder="Mời bạn nhập bình luận" type="text" />
+                                                <input className="w-full rounded text-sm" placeholder="Mời bạn nhập bình luận" type="text" />
                                         </div>
                                         <div className="p-4">
                                                 <div className='mt-6'>
