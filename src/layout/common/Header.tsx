@@ -61,10 +61,10 @@ const Header = () => {
                                                 </div>
                                                 <div className="dropdown-hover uppercase flex items-center gap-1 relative py-3">Địa điểm<MdKeyboardArrowDown fontSize={22} />
                                                         <ul className="dropdown-menu w-52 hidden overflow-hidden absolute top-[100%] bg-white drop-shadow-[0_0_10px_rgba(0,0,0,0.25)] rounded-sm text-">
-                                                                <li className="p-3 border-b last:border-b-0 border-dotted hover:bg-[color:var(--primary-color)] hover:text-white"><Link className="block" href="">Miền Bắc</Link></li>
-                                                                <li className="p-3 border-b last:border-b-0 border-dotted hover:bg-[color:var(--primary-color)] hover:text-white"><Link className="block" href="">Miền Trung</Link></li>
-                                                                <li className="p-3 border-b last:border-b-0 border-dotted hover:bg-[color:var(--primary-color)] hover:text-white"><Link className="block" href="">Miền Nam</Link></li>
-                                                                <li className="p-3 border-b last:border-b-0 border-dotted hover:bg-[color:var(--primary-color)] hover:text-white"><Link className="block" href="">Du lịch nước ngoài</Link></li>
+                                                                <li className="p-3 border-b last:border-b-0 border-dotted hover:bg-[color:var(--primary-color)] hover:text-white"><Link className="block" href="/tour/search/tour-viet-nam">Miền Bắc</Link></li>
+                                                                <li className="p-3 border-b last:border-b-0 border-dotted hover:bg-[color:var(--primary-color)] hover:text-white"><Link className="block" href="/tour/search/tour-viet-nam">Miền Trung</Link></li>
+                                                                <li className="p-3 border-b last:border-b-0 border-dotted hover:bg-[color:var(--primary-color)] hover:text-white"><Link className="block" href="/tour/search/tour-viet-nam">Miền Nam</Link></li>
+                                                                <li className="p-3 border-b last:border-b-0 border-dotted hover:bg-[color:var(--primary-color)] hover:text-white"><Link className="block" href="/tour/search/tour-viet-nam">Du lịch nước ngoài</Link></li>
                                                         </ul>
                                                 </div>
                                                 <Link href="/about" className="dropdown-hover uppercase flex items-center gap-1 relative py-3">Về chúng tôi</Link>
