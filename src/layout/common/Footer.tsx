@@ -14,7 +14,7 @@ const Footer = () => {
                                                 <div>
                                                         <p className="uppercase text-black">Về ItourGo</p>
                                                         <div className='flex flex-col gap-2 text-sm mt-2'>
-                                                                <Link href="/">Chúng tôi</Link>
+                                                                <Link href="/about?tab=1">Chúng tôi</Link>
                                                                 <Link href="/">ItourGo Blog</Link>
                                                                 <Link href="/">Tư vấn miễn phí</Link>
                                                         </div>
@@ -22,9 +22,9 @@ const Footer = () => {
                                                 <div>
                                                         <p className="uppercase text-black">Thông Tin Cần Biết</p>
                                                         <div className='flex flex-col gap-2 text-sm mt-2'>
-                                                                <Link href="/">Điều kiện và điều khoản</Link>
-                                                                <Link href="/">Quy chế hoạt động</Link>
-                                                                <Link href="/">Câu hỏi thường gặp</Link>
+                                                                <Link href="/about?tab=4">Điều kiện và điều khoản</Link>
+                                                                <Link href="/about?tab=3">Chính sách bảo mật</Link>
+                                                                <Link href="/about?tab=2">Câu hỏi thường gặp</Link>
                                                         </div>
                                                 </div>
                                                 <div>
