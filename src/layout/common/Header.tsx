@@ -69,8 +69,8 @@ const Header = () => {
                                                 </div>
                                                 <Link href="/about" className="dropdown-hover uppercase flex items-center gap-1 relative py-3">Về chúng tôi</Link>
 
-                                                <Link href="/" className="dropdown-hover uppercase flex items-center gap-1 relative py-3">blog</Link>
-                                                <Link href="/" className="dropdown-hover uppercase flex items-center gap-1 relative py-3">Mã giảm giá</Link>
+                                                <Link href="/blog" className="dropdown-hover uppercase flex items-center gap-1 relative py-3">blog</Link>
+                                                {/* <Link href="/" className="dropdown-hover uppercase flex items-center gap-1 relative py-3">Mã giảm giá</Link> */}
                                                 <button className="p-2">
                                                         <BsSearch className="hover:" />
                                                 </button>

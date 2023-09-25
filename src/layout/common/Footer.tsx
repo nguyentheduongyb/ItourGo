@@ -23,7 +23,7 @@ const Footer = () => {
                                                         <p className="uppercase text-black">Thông Tin Cần Biết</p>
                                                         <div className='flex flex-col gap-2 text-sm mt-2'>
                                                                 <Link href="/about?tab=4">Điều kiện và điều khoản</Link>
-                                                                <Link href="/about?tab=3">Chính sách bảo mật</Link>
+                                                                <Link href="/aboutgit?tab=3">Chính sách bảo mật</Link>
                                                                 <Link href="/about?tab=2">Câu hỏi thường gặp</Link>
                                                         </div>
                                                 </div>
