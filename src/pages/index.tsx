@@ -201,7 +201,7 @@ const Home = () => {
         <div className="absolute w-full left-0 bottom-[-120px]">
           <div className="w-4/6 mx-auto">
             <div className="grid grid-cols-4 gap-6 flex justify-around">
-              <Link href="/tour/search/day-la-bai-viet-1" className=" hover:text-[color:var(--primary-color)]">
+              <Link href="/tour" className=" hover:text-[color:var(--primary-color)]">
                 <div className="rounded-2xl border-white bg-white border-[10px] w-full hover:drop-shadow-[0_0_10px_rgba(0,0,0,0.25)]">
                   <div className="rounded-2xl overflow-hidden">
                     <img className="w-full" src="https://cdn.tourradar.com/s3/content-pages/391/438x292/V2aYSJ.jpg" alt="" />
