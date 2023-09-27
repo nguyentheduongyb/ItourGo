@@ -42,7 +42,7 @@ const Header = () => {
                                         <div className="flex gap-4 text-[15px]">
                                                 <div className="dropdown-hover uppercase flex items-center gap-1 relative py-3 text-[color:var(--primary-color)]">Trang chủ<MdKeyboardArrowDown fontSize={22} />
                                                         <ul className="dropdown-menu hidden w-60 absolute top-[100%] bg-white drop-shadow-[0_0_10px_rgba(0,0,0,0.25)] text-black">
-                                                                <li className="p-3 border-b last:border-b-0 border-dotted hover:bg-[color:var(--primary-color)] hover:text-white "><Link className="block" href="/tour/search/tour-viet-nam">Tour</Link></li>
+                                                                <li className="p-3 border-b last:border-b-0 border-dotted hover:bg-[color:var(--primary-color)] hover:text-white "><Link className="block" href="/tour">Tour</Link></li>
                                                                 <li className="p-3 border-b last:border-b-0 border-dotted hover:bg-[color:var(--primary-color)] hover:text-white"><Link className="block" href="/hotel">Khách sạn</Link></li>
                                                                 <li className="p-3 border-b last:border-b-0 border-dotted hover:bg-[color:var(--primary-color)] hover:text-white"><Link className="block" href="/restaurant">Nhà hàng</Link></li>
                                                                 <li className="p-3 border-b last:border-b-0 border-dotted hover:bg-[color:var(--primary-color)] hover:text-white dropdown-subhover relative">
