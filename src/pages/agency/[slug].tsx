@@ -5,7 +5,7 @@ import Link from "next/link"
 import { BiChat, BiSolidDownArrow, BiSolidStar } from "react-icons/bi"
 import { BsShop } from "react-icons/bs"
 import { GoPlus } from "react-icons/go"
-
+import Review from '~/components/agency/Review'
 const Agency = () => {
 
         const [tab, setTab] = useState(1)
@@ -85,7 +85,7 @@ const Agency = () => {
                                 <div className="container">
                                         <div className="grid grid-flow-col justify-stretch uppercase">
                                                 <button id={`1`} onClick={handleChangeTab} className={`px-2 py-3 flex justify-center ${tab == 1 ? "border-b border-b-4 border-b-red-500 text-red-500" : ""}`}>
-                                                        Dạo
+                                                        Đánh giá
                                                 </button>
                                                 <button id={`2`} onClick={handleChangeTab} className={`px-2 py-3 flex justify-center ${tab == 2 ? "border-b border-b-4 border-b-red-500 text-red-500" : ""}`}>
                                                         Tất cả sản phẩm
@@ -111,141 +111,37 @@ const Agency = () => {
 
                         <div className="bg-[#ccc]">
                                 <div className="container">
-                                        <div className={`${tab == 1 ? "flex" : "hidden"} grid grid-cols-5 gap-8 py-12`}>
-                                                <Link href="/tour/day-la-bai-viet-1" className="overflow-hidden rounded bg-white drop-shadow-[0_0_10px_rgba(0,0,0,0.25)]">
-                                                        <div className="w-full pt-[100%] bg-no-repeat bg-center bg-cover" style={{ backgroundImage: 'url("https://media.vietravel.com/images/Content/ba-na-hills.jpg")' }}>
-                                                                {/* <img className="w-full" src="https://media.vietravel.com/images/Content/ba-na-hills.jpg" alt="" /> */}
-
-                                                        </div>
-                                                        <div className="">
-                                                                <div className="p-4">
-                                                                        <div className="flex flex-col gap-4 pb-4 border-b border-dotted">
-                                                                                <h3 className='text-[color:var(--primary-color)] text-fg font-semibold'>Đà Nẵng, Việt Nam</h3>
-                                                                                <h4 className='text-3xl font-semibold'>Bà Nà Hills</h4>
-                                                                                <p className="line-clamp-3">Du khách có thể tham quan các ngôi chùa, thưởng ngoạn cảnh quan thiên nhiên tuyệt đẹp. Được ví von như một Châu Âu thu nhỏ</p>
-                                                                        </div>
-
-                                                                </div>
-
-                                                                <div className="p-4 flex gap-2">
-                                                                        <span>$170.00</span>
-                                                                        <i>|</i>
-                                                                        <span>Per person</span>
-                                                                </div>
-                                                        </div>
-                                                </Link>
-                                                <Link href="/tour/day-la-bai-viet-1" className="overflow-hidden rounded bg-white drop-shadow-[0_0_10px_rgba(0,0,0,0.25)]">
-                                                        <div className="w-full pt-[100%] bg-no-repeat bg-center bg-cover" style={{ backgroundImage: 'url("https://media.vietravel.com/images/Content/ba-na-hills.jpg")' }}>
-                                                                {/* <img className="w-full" src="https://media.vietravel.com/images/Content/ba-na-hills.jpg" alt="" /> */}
-
-                                                        </div>
-                                                        <div className="">
-                                                                <div className="p-4">
-                                                                        <div className="flex flex-col gap-4 pb-4 border-b border-dotted">
-                                                                                <h3 className='text-[color:var(--primary-color)] text-fg font-semibold'>Đà Nẵng, Việt Nam</h3>
-                                                                                <h4 className='text-3xl font-semibold'>Bà Nà Hills</h4>
-                                                                                <p className="line-clamp-3">Du khách có thể tham quan các ngôi chùa, thưởng ngoạn cảnh quan thiên nhiên tuyệt đẹp. Được ví von như một Châu Âu thu nhỏ</p>
-                                                                        </div>
-
-                                                                </div>
-
-                                                                <div className="p-4 flex gap-2">
-                                                                        <span>$170.00</span>
-                                                                        <i>|</i>
-                                                                        <span>Per person</span>
-                                                                </div>
-                                                        </div>
-                                                </Link>
-                                                <Link href="/tour/day-la-bai-viet-1" className="overflow-hidden rounded bg-white drop-shadow-[0_0_10px_rgba(0,0,0,0.25)]">
-                                                        <div className="w-full pt-[100%] bg-no-repeat bg-center bg-cover" style={{ backgroundImage: 'url("https://media.vietravel.com/images/Content/ba-na-hills.jpg")' }}>
-                                                                {/* <img className="w-full" src="https://media.vietravel.com/images/Content/ba-na-hills.jpg" alt="" /> */}
-
-                                                        </div>
-                                                        <div className="">
-                                                                <div className="p-4">
-                                                                        <div className="flex flex-col gap-4 pb-4 border-b border-dotted">
-                                                                                <h3 className='text-[color:var(--primary-color)] text-fg font-semibold'>Đà Nẵng, Việt Nam</h3>
-                                                                                <h4 className='text-3xl font-semibold'>Bà Nà Hills</h4>
-                                                                                <p className="line-clamp-3">Du khách có thể tham quan các ngôi chùa, thưởng ngoạn cảnh quan thiên nhiên tuyệt đẹp. Được ví von như một Châu Âu thu nhỏ</p>
-                                                                        </div>
-
-                                                                </div>
-
-                                                                <div className="p-4 flex gap-2">
-                                                                        <span>$170.00</span>
-                                                                        <i>|</i>
-                                                                        <span>Per person</span>
-                                                                </div>
-                                                        </div>
-                                                </Link>
-                                                <Link href="/tour/day-la-bai-viet-1" className="overflow-hidden rounded bg-white drop-shadow-[0_0_10px_rgba(0,0,0,0.25)]">
-                                                        <div className="w-full pt-[100%] bg-no-repeat bg-center bg-cover" style={{ backgroundImage: 'url("https://media.vietravel.com/images/Content/ba-na-hills.jpg")' }}>
-                                                                {/* <img className="w-full" src="https://media.vietravel.com/images/Content/ba-na-hills.jpg" alt="" /> */}
-
-                                                        </div>
-                                                        <div className="">
-                                                                <div className="p-4">
-                                                                        <div className="flex flex-col gap-4 pb-4 border-b border-dotted">
-                                                                                <h3 className='text-[color:var(--primary-color)] text-fg font-semibold'>Đà Nẵng, Việt Nam</h3>
-                                                                                <h4 className='text-3xl font-semibold'>Bà Nà Hills</h4>
-                                                                                <p className="line-clamp-3">Du khách có thể tham quan các ngôi chùa, thưởng ngoạn cảnh quan thiên nhiên tuyệt đẹp. Được ví von như một Châu Âu thu nhỏ</p>
-                                                                        </div>
-
-                                                                </div>
-
-                                                                <div className="p-4 flex gap-2">
-                                                                        <span>$170.00</span>
-                                                                        <i>|</i>
-                                                                        <span>Per person</span>
-                                                                </div>
-                                                        </div>
-                                                </Link>
-                                                <Link href="/tour/day-la-bai-viet-1" className="overflow-hidden rounded bg-white drop-shadow-[0_0_10px_rgba(0,0,0,0.25)]">
-                                                        <div className="w-full pt-[100%] bg-no-repeat bg-center bg-cover" style={{ backgroundImage: 'url("https://media.vietravel.com/images/Content/ba-na-hills.jpg")' }}>
-                                                                {/* <img className="w-full" src="https://media.vietravel.com/images/Content/ba-na-hills.jpg" alt="" /> */}
-
-                                                        </div>
-                                                        <div className="">
-                                                                <div className="p-4">
-                                                                        <div className="flex flex-col gap-4 pb-4 border-b border-dotted">
-                                                                                <h3 className='text-[color:var(--primary-color)] text-fg font-semibold'>Đà Nẵng, Việt Nam</h3>
-                                                                                <h4 className='text-3xl font-semibold'>Bà Nà Hills</h4>
-                                                                                <p className="line-clamp-3">Du khách có thể tham quan các ngôi chùa, thưởng ngoạn cảnh quan thiên nhiên tuyệt đẹp. Được ví von như một Châu Âu thu nhỏ</p>
-                                                                        </div>
-
-                                                                </div>
-
-                                                                <div className="p-4 flex gap-2">
-                                                                        <span>$170.00</span>
-                                                                        <i>|</i>
-                                                                        <span>Per person</span>
-                                                                </div>
-                                                        </div>
-                                                </Link>
-                                                <Link href="/tour/day-la-bai-viet-1" className="overflow-hidden rounded bg-white drop-shadow-[0_0_10px_rgba(0,0,0,0.25)]">
-                                                        <div className="w-full pt-[100%] bg-no-repeat bg-center bg-cover" style={{ backgroundImage: 'url("https://media.vietravel.com/images/Content/ba-na-hills.jpg")' }}>
-                                                                {/* <img className="w-full" src="https://media.vietravel.com/images/Content/ba-na-hills.jpg" alt="" /> */}
-
-                                                        </div>
-                                                        <div className="">
-                                                                <div className="p-4">
-                                                                        <div className="flex flex-col gap-4 pb-4 border-b border-dotted">
-                                                                                <h3 className='text-[color:var(--primary-color)] text-fg font-semibold'>Đà Nẵng, Việt Nam</h3>
-                                                                                <h4 className='text-3xl font-semibold'>Bà Nà Hills</h4>
-                                                                                <p className="line-clamp-3">Du khách có thể tham quan các ngôi chùa, thưởng ngoạn cảnh quan thiên nhiên tuyệt đẹp. Được ví von như một Châu Âu thu nhỏ</p>
-                                                                        </div>
-
-                                                                </div>
-
-                                                                <div className="p-4 flex gap-2">
-                                                                        <span>$170.00</span>
-                                                                        <i>|</i>
-                                                                        <span>Per person</span>
-                                                                </div>
-                                                        </div>
-                                                </Link>
-
+                                        <div className={`${tab == 1 ? "flex" : "hidden"}`}>
+                                        
+                                        <div className="flex flex-col gap-5">
+                                        <div className="bg-white border-t-3 grid grid-cols-6 my-6 text-center text-sm">
+                                                <div className="border-slate-300 py-2 cursor-pointer">
+                                                       Tất cả
+                                                </div>
+                                                <div className=" py-2 cursor-pointer">
+                                                        5 Sao
+                                                </div>
+                                                <div className="py-2 cursor-pointer ">
+                                                        4 Sao
+                                                </div>
+                                                <div className="py-2 cursor-pointer">
+                                                        3 Sao
+                                                </div>
+                                                <div className="py-2 cursor-pointer">
+                                                        2 Sao
+                                                </div>
+                                                <div className="py-2 cursor-pointer">
+                                                        1 Sao
+                                                </div>
                                         </div>
+                                                <Review />
+                                                <Review />
+                                                <Review />
+                                                <Review />
+                                                <Review />
+                                        </div>  
+                                        </div>
+                                            
                                         <div className={`${tab == 2 ? "flex" : "hidden"} grid grid-cols-5 gap-8 py-12`}>
                                                 <Link href="/tour/day-la-bai-viet-1" className="overflow-hidden rounded bg-white drop-shadow-[0_0_10px_rgba(0,0,0,0.25)]">
                                                         <div className="w-full pt-[100%] bg-no-repeat bg-center bg-cover" style={{ backgroundImage: 'url("https://media.vietravel.com/images/Content/ba-na-hills.jpg")' }}>
