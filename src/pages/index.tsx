@@ -6,15 +6,25 @@ import { BsSearch } from "react-icons/bs"
 import { FaHotel } from "react-icons/fa"
 import { BiSolidStar } from 'react-icons/bi';
 import { useState } from 'react';
+import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io';
+import { log } from 'console';
 const Home = () => {
 
-
   const [tab, setTab] = useState("1")
-
+  const [quantity, setQuantity] = useState(false)
   const handleChangeTab = (e: any) => {
 
     setTab(e.currentTarget.getAttribute('id'))
   }
+
+
+  const handleScrollBack = (e: any) => {
+    document.getElementById('listTab').scrollLeft -= 400;
+  }
+  const handleScrollFoward = (e: any) => {
+    document.getElementById('listTab').scrollLeft += 400;
+  }
+
   return (
     <div>
 
@@ -27,11 +37,22 @@ const Home = () => {
               <h1 className="mb-8 text-[#D0E3F0] text-lg font-semibold capitalize">Bắt đầu lên kế hoạch cho chuyến đi mơ ước của bạn ngay hôm nay!</h1>
               <p className="mb-16">Tìm những địa điểm tuyệt vời để lưu trú, ăn uống, mua sắm hoặc ghé thăm từ các chuyên gia địa phương</p>
 
-              <div className="flex h-[52px] gap-4 mb-12">
-                <button id="1" onClick={handleChangeTab} className={`px-3 h-full flex gap-2 items-center rounded ${tab == "1" ? 'bg-[color:var(--primary-color)] text-white' : 'bg-white text-black'}`}><FaHotel /><span className="font-semibold">Tour</span></button>
-                <button id="2" onClick={handleChangeTab} className={`px-3 h-full flex gap-2 items-center rounded ${tab == "2" ? 'bg-[color:var(--primary-color)] text-white' : 'bg-white text-black'}`}><FaHotel /><span className="font-semibold">Khách sạn</span></button>
-                <button id="3" onClick={handleChangeTab} className={`px-3 h-full flex gap-2 items-center rounded ${tab == "3" ? 'bg-[color:var(--primary-color)] text-white' : 'bg-white text-black'}`}><FaHotel /><span className="font-semibold">Nhà hàng</span></button>
-                <button id="4" onClick={handleChangeTab} className={`px-3 h-full flex gap-2 items-center rounded ${tab == "4" ? 'bg-[color:var(--primary-color)] text-white' : 'bg-white text-black'}`}><FaHotel /><span className="font-semibold">Vé máy bay</span></button>
+              <div className="flex flex h-[52px] gap-4 mb-12 items-center overflow-x-hidden relative">
+                <button className='absolute left-0 h-full w-8 bg-[rgba(0,0,0,0.2)] flex items-center justify-center'>
+                  <IoIosArrowBack size="32" color="white" onClick={handleScrollBack} />
+                </button>
+                <div id="listTab" className="flex h-[52px] gap-4 items-center overflow-x-hidden px-8 w-[calc(100%-48px)]">
+                  <button id="1" onClick={handleChangeTab} className={`px-3 h-full flex gap-2 items-center rounded ${tab == "1" ? 'bg-[color:var(--primary-color)] text-white' : 'bg-white text-black'}`}><FaHotel /><p className="font-semibold whitespace-nowrap">Tour</p></button>
+                  <button id="2" onClick={handleChangeTab} className={`px-3 h-full flex gap-2 items-center rounded ${tab == "2" ? 'bg-[color:var(--primary-color)] text-white' : 'bg-white text-black'}`}><FaHotel /><p className="font-semibold whitespace-nowrap">Khách sạn</p></button>
+                  <button id="3" onClick={handleChangeTab} className={`px-3 h-full flex gap-2 items-center rounded ${tab == "3" ? 'bg-[color:var(--primary-color)] text-white' : 'bg-white text-black'}`}><FaHotel /><p className="font-semibold whitespace-nowrap">Tàu</p></button>
+                  <button id="4" onClick={handleChangeTab} className={`px-3 h-full flex gap-2 items-center rounded ${tab == "4" ? 'bg-[color:var(--primary-color)] text-white' : 'bg-white text-black'}`}><FaHotel /><p className="font-semibold whitespace-nowrap">Phương tiện</p></button>
+                  <button id="4" onClick={handleChangeTab} className={`px-3 h-full flex gap-2 items-center rounded ${tab == "4" ? 'bg-[color:var(--primary-color)] text-white' : 'bg-white text-black'}`}><FaHotel /><p className="font-semibold whitespace-nowrap">Nhà hàng</p></button>
+                  <button id="4" onClick={handleChangeTab} className={`px-3 h-full flex gap-2 items-center rounded ${tab == "4" ? 'bg-[color:var(--primary-color)] text-white' : 'bg-white text-black'}`}><FaHotel /><p className="font-semibold whitespace-nowrap">Voucher</p></button>
+                </div>
+
+                <button className='absolute right-0 h-full w-8 bg-[rgba(0,0,0,0.2)] flex items-center justify-center'>
+                  <IoIosArrowForward size="32" color="white" onClick={handleScrollFoward} />
+                </button>
               </div>
 
               <form className={`${tab == "1" ? 'block' : 'hidden'}`} action="">
@@ -49,15 +70,19 @@ const Home = () => {
                     sizing="lg"
                   >
                     <option>
-                      Package Tour
+                      All
                     </option>
-                    <option>
-                      Daily Tour
-                    </option>
-                    <option>
-                      Tour Fixed
-                    </option>
-
+                    <option>Tour hằng ngày</option>
+                    <option>- Tour hằng ngày - FIT</option>
+                    <option>- Tour hằng ngày - GIT</option>
+                    <option>- Tour hằng ngày - Excursion</option>
+                    <option>- Tour hằng ngày - Tracsports Packages</option>
+                    <option>Tour trọn gói</option>
+                    <option>- Tour trọn gói - FIT</option>
+                    <option>- Tour trọn gói - GIT</option>
+                    <option>- Tour trọn gói - Excursion</option>
+                    <option>- Tour trọn gói - Tracsports Packages</option>
+                    <option>Tour cố định</option>
                   </Select>
                 </div>
                 <div className="w-full grid grid-cols-2 gap-8 mt-4">
@@ -68,13 +93,42 @@ const Home = () => {
                     type="text"
                     sizing="lg"
                   />
-                  <TextInput
-                    id="destination"
-                    placeholder="Khởi hành từ"
-                    required
-                    type="text"
-                    sizing="lg"
-                  />
+                  <div className='relative'>
+                    <TextInput
+                      id="destination"
+                      placeholder="2 N.Lớn - 0 T.Em - 1 Phòng"
+                      required
+                      onClick={() => { setQuantity(true) }}
+                      className='relative'
+                      type="text"
+                      sizing="lg"
+                    />
+                    <div className={`${quantity ? "flex" : "hidden"} z-20 absolute w-80 left-[10%] top-[120%] rouded bg-white p-4 flex-col gap-3`}>
+                      <div className='flex justify-between w-full'>
+                        <p className='whitespace-nowrap font-medium'>Phòng:</p>
+                        <p className='flex-1 text-right'>DBL:1;</p>
+                      </div>
+                      <div className='flex justify-between w-full'>
+                        <p className='whitespace-nowrap font-medium'>Người lớn:</p>
+                        <div className='flex items-center gap-6 text-xl'>
+                          <button className='font-semibold border rounded px-2'>+</button>
+                          <span>1</span>
+                          <button className='font-semibold border rounded px-2'>-</button>
+                        </div>
+                      </div>
+                      <div className='flex justify-between w-full'>
+                        <p className='whitespace-nowrap font-medium'>Trẻ em:</p>
+                        <div className='flex items-center gap-6 text-xl'>
+                          <button className='font-semibold border rounded px-2'>+</button>
+                          <span>1</span>
+                          <button className='font-semibold border rounded px-2'>-</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+
+
                 </div>
                 <Link href="/search/search">
                   <Button className="w-full mt-6" size="lg"><span className="flex items-center gap-2"><BsSearch />Tìm kiếm ngay</span></Button>

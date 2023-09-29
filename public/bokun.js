@@ -44,8 +44,8 @@ bokunElement.innerHTML = `
                                                                 </p>
                                                         </div>
                                                         <div class="flex grid grid-cols-2 gap-4 mt-5">
-                                                                <Link class="border border-[color:var(--primary-color)] bg-white p-3 text-center text-[color:var(--primary-color)] rounded font-bold text-lg" href="/user/payment">Đặt cọc</Link>
-                                                                <Link class="bg-[color:var(--primary-color)] p-3 text-center text-white rounded font-bold text-lg" href="/user/payment">Yêu cầu đặt</Link>
+                                                                <a class="border border-[color:var(--primary-color)] bg-white p-3 text-center text-[color:var(--primary-color)] rounded font-bold text-lg" href="/user/payment">Đặt cọc</a>
+                                                                <a class="bg-[color:var(--primary-color)] p-3 text-center text-white rounded font-bold text-lg" href="/user/payment">Yêu cầu đặt</a>
 
                                                         </div>
                                                 </div>
