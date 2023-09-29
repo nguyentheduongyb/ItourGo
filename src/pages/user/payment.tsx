@@ -5,19 +5,32 @@ import Link from "next/link"
 import axios from 'axios';
 import { Checkbox, Label, Button, TextInput, Tooltip, Modal } from "flowbite-react"
 import { useRouter } from 'next/navigation';
+import TourDetail from "../tour/[slug]";
+import { useSearchParams } from 'next/navigation'
 
 import { HiOutlineExclamationCircle } from "react-icons/hi";
+import { Router } from "next/router";
+import { count } from "console";
 
 
 const Payment = () => {
-
+        const formatter = new Intl.NumberFormat('en-US', {
+                style: 'currency',
+                currency: 'VND',
+                minimumFractionDigits: 0
+        })
+        const searchParams = useSearchParams()
         const { push } = useRouter();
-
+        const totalP = searchParams.get('totalPrice')
+        const count1 = searchParams.get('quantity1')
+        const count2 = searchParams.get('quantity2')
+        const price = searchParams.get('price')
+        const sub = !!searchParams.get('isSubscribed')
         const [show, setShow] = useState(false)
         const [confirm, setConfirm] = useState(false)
         const [quantity, setQuantity] = useState(1)
-        const [price, setPrice] = useState(150000)
-        const [total, setTotal] = useState(price)
+        // const [price, setPrice] = useState(150000)
+        // const [total, setTotal] = useState(price)
         const transferMessage = "entidy"
         const [imageQR, setImageQR] = useState('')
         const getQRCode = () => {
@@ -28,7 +41,7 @@ const Payment = () => {
                                 acqId: "970436",
                                 addInfo: "entidy",
                                 template: "print",
-                                amount: 1000000
+                               
                         },
                         {
                                 headers: {
@@ -75,7 +88,7 @@ const Payment = () => {
                                                                 <p className="w-40 text-center">Thành tiền</p>
                                                         </div>
                                                         <div className="flex gap-4 mb-4 items-center">
-                                                                <p className="text-[color:var(--primary-color)] text-xl font-medium">PNG SOFT</p>
+                                                                <p className="text-[color:var(--primary-color)] text-xl font-medium">PNGSOFT</p>
                                                                 <span>|</span>
                                                                 <button>Chat ngay</button>
                                                         </div>
@@ -91,18 +104,18 @@ const Payment = () => {
                                                                         <div className="flex gap-3">
                                                                                 <div className="w-24">Người lớn</div>
                                                                                 <div className="flex">
-                                                                                        <p className="w-40 text-center">1555000đ</p>
-                                                                                        <p className="w-24 text-center">1</p>
-                                                                                        <p className="w-40 text-center">15500</p>
+                                                                                        <p className="w-40 text-center font-semibold">{formatter.format(Number(price))}</p>
+                                                                                        <p className="w-24 text-center ">{count1}</p>
+                                                                                        <p className="w-40 text-center font-semibold">{formatter.format(Number(price) * Number(count1))}</p>
                                                                                 </div>
 
                                                                         </div>
                                                                         <div className="flex gap-3">
                                                                                 <div className="w-24">Trẻ em</div>
                                                                                 <div className="flex">
-                                                                                        <p className="w-40 text-center">1555000đ</p>
-                                                                                        <p className="w-24 text-center">1</p>
-                                                                                        <p className="w-40 text-center">15500</p>
+                                                                                        <p className="w-40 text-center font-semibold">{formatter.format(Number(price) / 2)}</p>
+                                                                                        <p className="w-24 text-center ">{count2}</p>
+                                                                                        <p className="w-40 text-center font-semibold">{formatter.format(Number(price) * Number(count2) / 2)}</p>
                                                                                 </div>
 
                                                                         </div>
@@ -111,10 +124,29 @@ const Payment = () => {
 
                                                 </div>
                                                 <div className="border-y flex justify-end gap-60 py-4 text-sm">
-                                                        <button>Voucher của Shop</button>
-                                                        <button>Chọn Voucher</button>
+                                                        <div className="flex gap-3">
+                                                                <input className="mt-3" type="checkbox" checked
+                                                                        />
+                                                                <div className="w-24">Phụ thu phòng đơn</div>
+                                                                <div className="flex">
+                                                                        <p className="w-40 text-center font-semibold">{formatter.format(2000000)}</p>
+                                                                </div>
+
+                                                        </div>
+
                                                 </div>
-                                                <p className="py-3 text-end border-b ">Tổng số tiền (3 sản phẩm): <span>183000đ</span></p>
+                                                <div className="border-y flex justify-end gap-60 py-4 text-sm">
+                                                        <div className="flex gap-3">
+                                                                <div className="w-24">Giảm giá</div>
+                                                                <div className="flex">
+
+                                                                        <p className="w-40 text-center font-semibold">-{formatter.format(1000000)}</p>
+                                                                </div>
+
+                                                        </div>
+
+                                                </div>
+                                                <p className="py-3 text-end border-b ">Tổng số tiền:  <span className="font-medium text-2xl text-orange-500 ml-1">{totalP}</span></p>
 
                                                 <div className="flex py-3 justify-between">
                                                         <div className="flex items-center w-4/12 gap-4 pr-8 border-r">
@@ -136,33 +168,7 @@ const Payment = () => {
                                                 <img className="w-full" src={imageQR} alt="" />
                                                 <Button className="rounded-full" color="success" onClick={handleSuccess}>Đã chuyển tiền! Thông báo cho người bán</Button>
                                         </div>
-                                        {/* <div className="flex flex-col gap-6">
-                                                <div className="border border-dotted py-3 px-4 rounded flex items-center gap-8">
-                                                        <img className="w-24" src="https://upload.wikimedia.org/wikipedia/commons/2/25/Logo_MB_new.png" alt="" />
-                                                        <div>
-                                                                <p className="font-medium text-xl">0985444759</p>
-                                                                <p>NGUYEN THE DUONG</p>
-                                                        </div>
-                                                </div>
-                                                <div className="border border-dotted py-3 px-4 rounded flex items-center gap-8">
-                                                        <img className="w-24" src="https://upload.wikimedia.org/wikipedia/commons/2/25/Logo_MB_new.png" alt="" />
-                                                        <div>
-                                                                <p className="font-medium text-xl">0985444759</p>
-                                                                <p>NGUYEN THE DUONG</p>
-                                                        </div>
-                                                </div>
-                                                <div className="flex pl-4 gap-8 items-center">
-                                                        <label className="text-red-500 text-lg" htmlFor="">Lời nhắn:</label>
-                                                        <div className="flex justify-between items-center flex-1 bg-gray-400 pl-5  border rounded overflow-hidden">
-                                                                <p>{transferMessage}</p>
-                                                                <Tooltip content="Copied" trigger="click" className="text-xs leading-none py-1 px-2">
-                                                                        <button className="text-xs p-4 bg-white" onClick={() => navigator.clipboard.writeText(transferMessage)}>
-                                                                                <LuCopy />
-                                                                        </button>
-                                                                </Tooltip>
-                                                        </div>
-                                                </div>
-                                        </div> */}
+
                                 </Modal.Body>
                         </Modal>
 
