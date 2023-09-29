@@ -1,6 +1,6 @@
 'use client'
 import React from 'react'
-
+import { useState } from 'react'
 import Link from 'next/link'
 import { MdLocationOn } from "react-icons/md"
 import { GoClock } from "react-icons/go"
@@ -8,8 +8,53 @@ import { BsCheckLg } from "react-icons/bs"
 import { BiBus, BiSolidPlane, BiSolidLike, BiShareAlt, BiSolidStar } from "react-icons/bi"
 import { HiOutlineInformationCircle } from "react-icons/hi"
 import Script from 'next/script'
+import Payment from '~/components/profile/Payment'
+
+
 const TourDetail = () => {
+        const formatter = new Intl.NumberFormat('en-US', {
+                style: 'currency',
+                currency: 'VND',
+                minimumFractionDigits: 0
+        })
+        
+        const [count, setCount] = useState(1);
+        var totalPrice
+        const [count2, setCount2] = useState(1);
+        const [price, setPrice] = useState(3000000);
+        const [isSubscribed, setIsSubscribed] = useState(false);
+        const handleChange = () => {
+
+                setIsSubscribed(current => !current);
+        };
+        function addPas() {
+                setCount(count + 1);
+        }
+        function delPas() {
+                if (count > 1) {
+                        setCount(count - 1);
+                }
+        }
+        function addPas_2() {
+                setCount2(count2 + 1);
+        }
+        function delPas_2() {
+                if (count2 > 0) {
+                        setCount2(count2 - 1);
+                }
+        }
+        function calPrice1() {
+                setPrice(5000000);
+        }
+        function calPrice2() {
+                setPrice(4000000);
+        }
+        function calPrice3() {
+
+                setPrice(3000000);
+        }
         return (
+
                 <div className="container">
                         <div className="w-full p-5 rounded-xl">
                                 <h2 className="mb-3 text-[color:var(--primary-color)] text-4xl font-bold">Four Islands Excursion in South Phu Quoc - Day Tour</h2>
@@ -268,7 +313,73 @@ const TourDetail = () => {
 
                                         </div>
                                         <div className="flex-1">
-                                                <Script src="/bokun.js"></Script>
+                                                <div className="w-full bg-white rounded-sm p-4 drop-shadow-[0_0_10px_rgba(0,0,0,0.25)] rounded-lg mb-3">
+                                                        <h3 className="mb-3 text-[color:var(--primary-color)] text-xl font-bold">Lịch khởi hành & Giá</h3>
+                                                        <p className="">Chọn ngày khời hành:</p>
+                                                        <div className="flex justify-between mt-3">
+                                                                <button className='p-3 border rounded focus:border-teal-500' onClick={calPrice1}>28/09</button>
+                                                                <button className='p-3 border rounded focus:border-teal-500' onClick={calPrice2}>29/09</button>
+                                                                <button className='p-3 border rounded focus:border-teal-500' onClick={calPrice3}>30/09</button>
+                                                                <button className='p-3 border rounded'>Tất cả</button>
+                                                        </div>
+
+
+                                                        <div className='p-3 flex items-center justify-between border rounded-lg mt-3'>
+                                                                <span>Người lớn</span>
+                                                                <span className='text-orange-500 font-medium text-l'>{formatter.format(price * count)}</span>
+                                                                <div className='flex items-center gap-3 text-l'>
+                                                                        <button className='font-semibold' onClick={addPas}>+</button>
+                                                                        <span>{count}</span>
+                                                                        <button className='font-semibold' onClick={delPas}>-</button>
+                                                                </div>
+
+
+
+
+
+                                                        </div>
+                                                        <div className='p-3 flex items-center justify-between border rounded-lg mt-3'>
+                                                                <span>Trẻ em</span>
+                                                                <span className='text-orange-500 font-medium text-l'> {formatter.format(price * count2 / 2)} </span>
+                                                                <div className='flex items-center gap-3 text-l'>
+                                                                        <button className='font-semibold' onClick={addPas_2}>+</button>
+                                                                        <span>{count2}</span>
+                                                                        <button className='font-semibold' onClick={delPas_2}>-</button>
+                                                                </div>
+                                                        </div>
+                                                        <p className='flex items-center mt-3 gap-3 text-[color:var(--primary-color)]'><HiOutlineInformationCircle /><span>Liên hệ để xác nhận chỗ</span></p>
+                                                        <div className="mt-3">
+                                                                <p className="flex justify-between mt-2 items-center">
+                                                                        <input type="checkbox" onChange={handleChange} />
+                                                                        <span>Phụ thu phòng đơn</span>
+                                                                        <span className="text-orange-500">{formatter.format(2000000)}</span>
+                                                                </p>
+                                                                <p className="flex justify-between mt-2 items-center">
+                                                                        <input type="checkbox" id="promo" checked />
+                                                                        <span>Giảm giá</span>
+                                                                        <span className="text-orange-500">-{formatter.format(1000000)}</span>
+                                                                </p>
+                                                                <p className="flex justify-between mt-2 items-center">
+                                                                        <span className="font-medium text-xl">Tổng cộng</span>
+                                                                        <span className="font-medium text-2xl text-orange-500">{totalPrice = !isSubscribed ? formatter.format(price * (count + count2 / 2) - 1000000) : formatter.format(price * (count + count2 / 2) + 1000000)}</span>
+                                                                </p>
+                                                        </div>
+                                                        <div className="flex grid grid-cols-2 gap-4 mt-5">
+                                                                <Link className="border border-[color:var(--primary-color)] bg-white p-3 text-center text-[color:var(--primary-color)] rounded font-bold text-lg" href="/user/payment">Đặt cọc</Link>
+                                                                <Link className="bg-[color:var(--primary-color)] p-3 text-center text-white rounded font-bold text-lg" href={{
+                                                                        pathname: "/user/payment",
+                                                                        query: {
+                                                                           totalPrice: totalPrice,   
+                                                                           quantity1: count,
+                                                                           quantity2: count2,
+                                                                           price:price,
+                                                                           isSubscribed:isSubscribed
+                                                                        },
+                                                                }}>Yêu cầu đặt</Link>
+
+                                                        </div>
+                                                </div>
+                                             
                                                 <div className="bokun-elm"></div>
                                                 <div className="bg-white rounded-sm p-4 drop-shadow-[0_0_10px_rgba(0,0,0,0.25)] rounded-lg mb-3">
                                                         <div className="flex grid grid-cols-2 gap-4">
@@ -377,37 +488,12 @@ const TourDetail = () => {
                                                 </Link>
                                         </div>
                                 </div>
-
-
-                                {/* Comment */}
-                                <div className="mt-12 w-3/5 p-8 bg-gray-300 rounded-xl border">
-                                        <h4 className="">Bình luận</h4>
-                                        <div className="py-4 border-b">
-                                                <input className="w-full rounded text-sm" placeholder="Mời bạn nhập bình luận" type="text" />
-                                        </div>
-                                        <div className="p-4">
-                                                <div className='mt-6'>
-                                                        <p className='text-sm font-bold'>Nguyễn Thế Dương</p>
-                                                        <p className='text-xs mt-2'>Công ty của mình có địa chỉ ở đâu ạ?</p>
-                                                </div>
-                                                <div className='mt-6'>
-                                                        <p className='text-sm font-bold'>Nguyễn Thế Dương</p>
-                                                        <p className='text-xs mt-2'>Công ty của mình có địa chỉ ở đâu ạ?</p>
-                                                </div>
-                                                <div className='mt-6'>
-                                                        <p className='text-sm font-bold'>Nguyễn Thế Dương</p>
-                                                        <p className='text-xs mt-2'>Công ty của mình có địa chỉ ở đâu ạ?</p>
-                                                </div>
-                                                <div className='mt-6'>
-                                                        <p className='text-sm font-bold'>Nguyễn Thế Dương</p>
-                                                        <p className='text-xs mt-2'>Công ty của mình có địa chỉ ở đâu ạ?</p>
-                                                </div>
-                                        </div>
-                                </div>
                         </div>
-
+                       
                 </div>
+                   
         )
+        
 }
 
 export default TourDetail
